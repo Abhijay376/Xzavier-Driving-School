@@ -21,13 +21,26 @@ document.addEventListener('DOMContentLoaded', function(){
   renderFullQuizQuestion();
 });
 
+/* ===================== NAV: Areas We Serve dropdown ===================== */
+function toggleAreaDropdown(btn){
+  var dd = btn.closest('.nav-dropdown');
+  if(!dd) return;
+  var open = dd.classList.toggle('open');
+  btn.setAttribute('aria-expanded', String(open));
+}
+document.addEventListener('click', function(e){
+  document.querySelectorAll('.nav-dropdown.open').forEach(function(dd){
+    if(!dd.contains(e.target)) dd.classList.remove('open');
+  });
+});
+
 /* ===================== TEST CENTRE SEARCH (home) ===================== */
 var TEST_CENTERS = [
   {name:'Drive Test Frankston', sub:'71 Hartnett Dr, Seaford VIC 3198', href:'drive-test-frankston.html'},
   {name:'Drive Test Mooroolbark', sub:'191 Hull Rd, Mooroolbark VIC 3138', href:'drive-test-mooroolbark.html'},
   {name:'Drive Test Pakenham', sub:'3/4 Stephenson St, Pakenham VIC 3810', href:'drive-test-pakenham.html'},
   {name:'Drive Test Heatherton', sub:'77 Corporate Dr, Heatherton VIC 3202', href:'drive-test-heatherton.html'},
-  {name:'Dandenong', sub:'Instructor base & lessons — VicRoads Dandenong does not conduct drive tests', href:'index.html#areas'}
+  {name:'Dandenong', sub:'Instructor base and lessons (VicRoads Dandenong does not conduct drive tests)', href:'index.html#areas'}
 ];
 
 function filterCenters(value){
@@ -97,7 +110,7 @@ function miniAnswerQuiz(value){
 
 /* ===================== FULL QUIZ (readiness-quiz.html) ===================== */
 var fullQuizQuestions = [
-  {q:'How confident are you with parallel parking?', opts:['Very confident — consistent every time','Somewhat — I sometimes need extra attempts','Not confident — I avoid it if I can'], area:'Parallel parking'},
+  {q:'How confident are you with parallel parking?', opts:['Very confident, consistent every time','Somewhat, I sometimes need extra attempts','Not confident, I avoid it if I can'], area:'Parallel parking'},
   {q:'How comfortable are you at multi-lane roundabouts?', opts:['Very confident','Somewhat confident','Not confident'], area:'Roundabouts'},
   {q:'How many supervised driving hours have you completed?', opts:['20+ hours','10–20 hours','Under 10 hours'], area:'Overall experience'},
   {q:'How confident are you merging onto highways or high-speed roads?', opts:['Very confident','Somewhat confident','Not confident'], area:'Highway merging'},
@@ -137,7 +150,7 @@ function fullAnswerQuiz(value){
       headline = 'You look test-ready!';
       lessonsRec = 'A 1–2 lesson refresher focused on test-day nerves and route familiarity should be enough.';
     } else if(fullScore <= 8){
-      headline = 'Almost there — a few gaps to close.';
+      headline = 'Almost there, just a few gaps to close.';
       lessonsRec = 'We’d recommend our 5-Lesson Pass, focused on your weaker areas below, before booking your test.';
     } else {
       headline = 'More practice recommended before booking your test.';
@@ -145,7 +158,7 @@ function fullAnswerQuiz(value){
     }
     var weakListHtml = fullWeak.length
       ? '<ul style="text-align:left;margin:12px 0;padding-left:18px">' + Array.from(new Set(fullWeak)).map(function(a){return '<li>' + a + '</li>';}).join('') + '</ul>'
-      : '<p style="margin:12px 0">No major weak spots identified — nice work!</p>';
+      : '<p style="margin:12px 0">No major weak spots identified. Nice work!</p>';
     box.className = 'tool-result show result-warn';
     box.innerHTML = '<h3 style="color:var(--navy);margin-bottom:8px">' + headline + '</h3>' +
       '<p><strong>Areas to focus on:</strong></p>' + weakListHtml +
@@ -196,10 +209,10 @@ function buildLicenceResult(country, age, exp){
     var youngUnknownAge = isNaN(age);
     var lightPathway = (!youngUnknownAge && age >= 25 && exp !== null && exp >= 3);
     var text = youngUnknownAge
-      ? 'Experienced Driver Recognition countries have requirements that depend on your age and years of experience — enter your age (and experience, on the full checker) for a precise answer.'
+      ? 'Experienced Driver Recognition countries have requirements that depend on your age and years of experience. Enter your age (and experience, on the full checker) for a precise answer.'
       : (lightPathway
-          ? 'Based on your age (25+) and experience (3+ years), you may qualify for a more direct pathway — but a knowledge test is still commonly required. Book a chat with us to confirm your exact requirement.'
-          : 'Based on your details, you’ll most likely need to complete a knowledge test, and — particularly if you’re under 25 or have less driving experience — a practical driving test as well.');
+          ? 'Based on your age (25+) and experience (3+ years), you may qualify for a more direct pathway, but a knowledge test is still commonly required. Book a chat with us to confirm your exact requirement.'
+          : 'Based on your details, you’ll most likely need to complete a knowledge test, and, particularly if you’re under 25 or have less driving experience, a practical driving test as well.');
     return { cls:'result-warn', text:'<strong>Experienced Driver Recognition country.</strong> ' + text + '<div style="margin-top:10px"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I%20have%20an%20overseas%20licence%20and%20want%20help%20with%20my%20Victorian%20conversion%20pathway.">Ask XDS for Help</a></div>' };
   }
   return { cls:'result-warn', text:'<strong>Full Victorian licensing process required.</strong> You’ll need to complete a knowledge test, a hazard perception test, and a practical driving test. Our instructors specialise in preparing overseas licence holders for exactly this pathway.<div style="margin-top:10px"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I%20need%20to%20complete%20the%20full%20Victorian%20driving%20test%20process%20and%20want%20lessons.">Book Lessons on WhatsApp</a></div>' };
@@ -207,11 +220,11 @@ function buildLicenceResult(country, age, exp){
 
 /* ===================== HOME FAQ ===================== */
 var homeFaqItems = [
-  {q:'How many lessons before my test?', a:'Most students need 10–20 hours depending on experience. Take the readiness quiz above for a personalised estimate.'},
-  {q:'Can I use your car for the actual test?', a:'Yes — our dual-control test vehicles are available for hire on test day, included in the Express Test Package and Ultimate Test Pass Pack.'},
-  {q:'What if my licence isn’t from a recognised country?', a:'You’ll likely need a knowledge test, hazard perception test, and practical driving test. Our conversion checker above tells you exactly which apply to you.'},
-  {q:'How do I book a lesson?', a:'Message us on WhatsApp using the button at the top or bottom of the page — we usually reply within the hour and can lock in a time straight away.'},
-  {q:'Which VicRoads test centres do you cover?', a:'Frankston, Mooroolbark, Pakenham and Heatherton — each with a dedicated guide on this site. We also provide lessons across Dandenong and nearby suburbs.'}
+  {q:'I&rsquo;m based in Dandenong, where will I actually sit my test?', a:'VicRoads Dandenong doesn&rsquo;t run practical drive tests, so Dandenong learners are usually booked at VicRoads Heatherton. Your instructor will train you specifically on that centre&rsquo;s local roads well before test day.'},
+  {q:'Do I need my own car, or can I use yours for the test?', a:'Either works. Bring a fully compliant personal vehicle, or hire one of our dual-control instructor cars, already built into the Express Test Package and Ultimate Test Pass Pack.'},
+  {q:'I passed my test overseas, do I still need to sit a VicRoads test?', a:'It depends entirely on which country issued your licence. Run it through our free Overseas Licence Conversion Checker above for an instant, specific answer.'},
+  {q:'What&rsquo;s the fastest way to lock in a lesson time?', a:'WhatsApp beats phone calls here, most enquiries get a reply and a confirmed slot within the hour. The button is fixed to the bottom of every page.'},
+  {q:'Do your instructors only work in Dandenong itself?', a:'No, Dandenong is our base but our coverage runs across South East Melbourne, with dedicated local pages for each of the 26 suburbs we serve and all four VicRoads test centres we prepare students for.'}
 ];
 
 function renderHomeFaq(){
@@ -255,9 +268,9 @@ document.addEventListener('keydown', function(e){
       and it will email you a free Access Key (no account needed).
    2. Paste that key below, replacing the placeholder text.
    Until you do this, submissions still work (they open WhatsApp) but are
-   NOT emailed anywhere yet — the fetch() call below will silently fail
+   NOT emailed anywhere yet. The fetch() call below will silently fail
    and the form falls back to WhatsApp-only. */
-var WEB3FORMS_ACCESS_KEY = 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE';
+var WEB3FORMS_ACCESS_KEY = '817557b2-8712-41bc-9cc8-226c45bed287';
 
 function submitContactForm(event, formPrefix){
   event.preventDefault();
