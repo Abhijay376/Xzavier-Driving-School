@@ -284,7 +284,7 @@ SCHEMA = '''<script type="application/ld+json">
   "alternateName": "XDS",
   "telephone": "+61434538142",
   "email": "xzavierdrivingschool@gmail.com",
-  "url": "https://xzavierdrivingschool.com.au",
+  "url": "https://drivetestvic.com.au",
   "areaServed": ["Dandenong", "Frankston", "Mooroolbark", "Pakenham", "Heatherton", "South East Melbourne"],
   "keywords": "driving school Dandenong, driving lessons Dandenong, Dandenong driving instructor, VicRoads test preparation Dandenong",
   "aggregateRating": {
@@ -353,7 +353,7 @@ def centre_schema(name):
   "alternateName": "XDS",
   "telephone": "+61434538142",
   "email": "xzavierdrivingschool@gmail.com",
-  "url": "https://xzavierdrivingschool.com.au/drive-test-{slug}.html",
+  "url": "https://drivetestvic.com.au/drive-test-{slug}.html",
   "description": "VicRoads {name} drive test centre guide and test preparation from X Zavier Driving School.",
   "address": {{
     "@type": "PostalAddress",
@@ -1483,7 +1483,7 @@ def suburb_page(suburb):
   "alternateName": "XDS",
   "telephone": "+61434538142",
   "email": "xzavierdrivingschool@gmail.com",
-  "url": "https://xzavierdrivingschool.com.au/{href}",
+  "url": "https://drivetestvic.com.au/{href}",
   "address": {{
     "@type": "PostalAddress",
     "streetAddress": "{addr}",
@@ -1527,3 +1527,56 @@ def suburb_page(suburb):
 
 for s in AREA_SUBURBS:
     suburb_page(s)
+
+# ============================================================
+# SITEMAP.XML + ROBOTS.TXT
+# Generated from the actual set of .html files written above, so it never
+# drifts out of sync with the real page list (no hardcoded page names).
+# ============================================================
+import datetime
+import glob
+
+SITE_ROOT = "https://drivetestvic.com.au"
+
+def build_sitemap_and_robots():
+    html_files = sorted(
+        os.path.basename(f) for f in glob.glob(os.path.join(OUT, "*.html"))
+    )
+    today = datetime.date.today().isoformat()
+
+    def priority_for(fname):
+        if fname == "index.html":
+            return "1.0"
+        if fname.startswith("drive-test-"):
+            return "0.9"
+        if fname.startswith("area-"):
+            return "0.8"
+        return "0.6"
+
+    url_entries = []
+    for fname in html_files:
+        loc = SITE_ROOT + "/" + ("" if fname == "index.html" else fname)
+        url_entries.append(
+            "  <url>\n    <loc>{loc}</loc>\n    <lastmod>{lastmod}</lastmod>\n    <priority>{priority}</priority>\n  </url>".format(
+                loc=loc, lastmod=today, priority=priority_for(fname)
+            )
+        )
+
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(url_entries)
+        + "\n</urlset>\n"
+    )
+    open(os.path.join(OUT, "sitemap.xml"), "w").write(sitemap)
+    print("sitemap.xml written:", len(sitemap), "bytes,", len(html_files), "urls")
+
+    robots = (
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        "Sitemap: {root}/sitemap.xml\n".format(root=SITE_ROOT)
+    )
+    open(os.path.join(OUT, "robots.txt"), "w").write(robots)
+    print("robots.txt written:", len(robots), "bytes")
+
+build_sitemap_and_robots()
