@@ -3,6 +3,7 @@ sys.path.insert(0, "/home/claude/site2")
 from build import page_shell, trust_section_html, OUT, set_area_nav_items, set_country_nav_items
 import os
 import math
+import re
 
 # ============================================================
 # AREA / SUBURB LANDING PAGES: data
@@ -1174,25 +1175,46 @@ def country_page(country):
     </div>
   </section>'''.format(name=name, label=tier["label"], summary=tier["summary"])
 
+    english = country["slug"] in ("philippines", "uk")
+    adj = {"india":"Indian","philippines":"Philippine","china":"Chinese","sri-lanka":"Sri Lankan","pakistan":"Pakistani","nepal":"Nepalese","uk":"UK"}[country["slug"]]
+    right_hand = country["slug"] in ("philippines", "china")
+    recognised = country["tier"] == "recognised"
+    qa = []
+    qa.append(("Do I need to sit tests to convert my {0} licence in Victoria?".format(adj),
+        ("No, in most cases. A current full {0} car licence can usually be swapped for a Victorian licence without a knowledge or drive test. Learner or provisional licences do not qualify for the swap.".format(name)) if recognised else
+        ("Yes. You need to pass the road rules knowledge test, the hazard perception test and the drive test. This applies whatever your age or how long you have driven, because Experienced Driver Recognition ended in Victoria on 30 April 2025.")))
+    qa.append(("Can I keep driving on my {0} licence while I sort this out?".format(adj),
+        "If you will live in Victoria for more than 6 months, VicRoads says you must convert, and the 6 months starts from the day you begin living here. Until then you can drive on your {0} licence if it is current and {1}.".format(
+            name, "in English" if english else "in English or carried with a NAATI-certified translation, or a translated International Driving Permit issued in {0}".format(name))))
+    if not english:
+        qa.append(("Can I sit the knowledge test in my own language?",
+            "VicRoads offers tests in other languages and can arrange an interpreter, but you need to book an in-person appointment through the VicRoads requirements checker to do it."))
+    if right_hand:
+        qa.append(("What is hardest for {0} drivers in Melbourne?".format(adj),
+            "Driving on the left. The most common mistakes we see are drifting right after a turn, looking left first at intersections, and entering roundabouts the wrong way. We spend the first lessons on these until they become automatic."))
+    if recognised:
+        qa.append(("What catches {0} drivers out in Melbourne?".format(adj),
+            "Most rules will feel familiar, but speeds are in km/h, school zones drop to 40 km/h at set times, and some Melbourne CBD intersections need a hook turn, where you turn right from the left lane. A refresher lesson is a quick way to get used to local roads."))
+    if not recognised:
+        qa.append(("How many lessons does an experienced {0} driver need?".format(adj),
+            "All our lessons are automatic. Experienced drivers usually need fewer lessons than new learners, because the focus is on Victorian road rules and test habits rather than car control. After your first lesson we tell you honestly what you need."))
+        qa.append(("Which test centre should I book?",
+            "Any centre works, but it helps to test where you have practised. We prepare students for VicRoads Frankston (Seaford), Pakenham, Heatherton and Ringwood, and can use our car for your test."))
+    items = "\n".join(
+        '        <div class="faq-item">\n          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">{q}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>\n          <div class="faq-a"><div class="faq-a-inner">{a}</div></div>\n        </div>'.format(q=q, a=a) for q, a in qa)
     faq = '''<section class="block block-alt">
     <div class="container">
       <div class="section-title"><span class="eyebrow">FAQ</span><h2>{name} Licence Conversion FAQ</h2></div>
       <div class="faq-list">
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need a driving test to convert my {name} licence in Victoria?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">{summary} You can confirm this with our <a href="licence-checker.html">licence checker</a> or the VicRoads requirements checker.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How can XDS help me convert my {name} licence?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">Our VicRoads ADI accredited instructors prepare {name} licence holders for the Victorian drive test, including the test routes at Frankston, Pakenham and Heatherton.</div></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How many lessons does an experienced {name} driver need?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">All our lessons are automatic. Experienced drivers usually need fewer lessons than new learners, because the focus is on Victorian road rules and test habits rather than car control. We will tell you after your first lesson what you need.</div></div>
-        </div>
+{items}
       </div>
     </div>
-  </section>'''.format(name=name, summary=tier["summary"])
+  </section>'''.format(name=name, items=items)
+    import json as _json
+    faq_schema = '<script type="application/ld+json">\n' + _json.dumps({
+        "@context": "https://schema.org", "@type": "FAQPage",
+        "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]
+    }, indent=2) + '\n</script>\n'
 
     body = '\n  '.join([hero, trust_section_html(), intro, tier_card, steps, faq, TOOLS_LINKS_SECTION])
 
@@ -1201,6 +1223,7 @@ def country_page(country):
         description="What {name} licence holders need to do to get a Victorian licence: tests, translation, and the driving habits to work on before your VicRoads test.".format(name=name),
         depth=0,
         body_content=body,
+        schema=faq_schema,
         page_key="licence-checker",
         breadcrumbs=[("Licence Checker", "licence-checker.html"), (name, None)],
     )
@@ -1614,14 +1637,42 @@ def suburb_page(suburb):
     </div>
   </section>'''.format(suburb=suburb, q=map_query)
 
+    def _short(r):
+        for sep in [", where", ", which", ", with", " where ", ", "]:
+            if sep in r:
+                r = r.split(sep)[0]
+                break
+        w = r.split()
+        if any(c.isupper() for c in w[0][1:]) or (len(w) > 1 and w[1][:1].isupper() and w[0] not in ("The",)):
+            return r
+        return r[0].lower() + r[1:]
+    road_list = "; ".join(_short(r) for r in profile["roads"])
+    landmark = (SUBURB_LOCAL_FACTS.get(suburb) or ["your local shops"])[0]
+    centre_notes = {
+        "Pakenham": " Note that VicRoads is moving Pakenham testing: the old Pakenham Testing Centre runs until Friday 13 November 2026, and tests booked on or after Monday 16 November are at the new centre at 33 Exchange Drive, Pakenham. Check the address on your booking confirmation.",
+        "Heatherton": " The Heatherton centre is in a business park on Corporate Drive, close to big multi-lane roads like Warrigal Road, so we make sure you are comfortable with lane changes and turning arrows before test day.",
+        "Frankston": " The Frankston test centre is actually in Seaford, at 71 Hartnett Dr, so we spend time on the Seaford and Carrum Downs roads around it.",
+        "Ringwood": "",
+    }
     faq_extra = [
         ("Which VicRoads test centre will I be tested at from {suburb}?".format(suburb=suburb),
-         centre_line + " You can book any centre you like, but it usually makes sense to test where you have practised."),
-        ("How many lessons will I need?",
-         "It depends on how much driving you have already done. After your first lesson in {suburb} we will tell you honestly what you need to work on and roughly how many lessons that will take.".format(suburb=suburb)),
-        ("Can I use your car for my test?",
-         "Yes. Our Express Test Package and Ultimate Test Pass Pack include use of our dual-control car for your test at VicRoads {c}.".format(c=centre_name)),
+         centre_line + centre_notes.get(centre_name, "")),
+        ("What roads will I drive on during lessons in {suburb}?".format(suburb=suburb),
+         "We start on quiet streets close to your home, then build up to the roads {suburb} learners find hardest: {roads}. By test day these should feel normal, not scary.".format(suburb=suburb, roads=road_list)),
+        ("Can you pick me up from school, work or {lm}?".format(lm=landmark),
+         "Yes. Every lesson includes pickup and drop-off anywhere in {suburb}, including home, school, TAFE, work or places like {lm}. Just tell us where when you book on WhatsApp.".format(suburb=suburb, lm=landmark)),
+        ("What happens on test day if I book with you?",
+         "We pick you up in {suburb}, do a warm-up drive on the roads around VicRoads {c}, and you sit the test in our dual-control automatic car. The VicRoads drive test has two stages: about 10 minutes of basic driving first, then about 20 minutes on busier roads if you pass Stage 1. This is included in our Express Test Package and Ultimate Test Pass Pack.".format(suburb=suburb, c=centre_name)),
+        ("How many lessons will I need before my test?",
+         "It depends on where you are starting from. If you are new to driving, we start with car control on quiet {suburb} streets. If you have already logged most of your 120 hours, lessons focus on test skills and the roads around VicRoads {c}. After your first lesson we tell you honestly how many more you need.".format(suburb=suburb, c=centre_name)),
+        ("Can I practise the actual test area before my test?",
+         "Yes. We run mock tests on the roads around VicRoads {c}, marked the way a VicRoads tester would mark them, so you know exactly what to fix before the real thing.".format(c=centre_name)),
     ]
+    import json as _json
+    faq_schema = '<script type="application/ld+json">\n' + _json.dumps({
+        "@context": "https://schema.org", "@type": "FAQPage",
+        "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}} for q, a in faq_extra]
+    }, indent=2) + '\n</script>\n'
     nap_faq = nap_faq_section(suburb, extra_faqs=faq_extra)
 
     area_served_json = ", ".join('"{0}"'.format(n) for n in nearest20)
@@ -1665,7 +1716,7 @@ def suburb_page(suburb):
         depth=0,
         body_content=body,
         page_key="area-" + slug,
-        schema=local_schema,
+        schema=local_schema + faq_schema,
         breadcrumbs=[("Areas We Serve", "index.html#areas"), (suburb, None)],
     )
     fname = area_page_href(suburb)
