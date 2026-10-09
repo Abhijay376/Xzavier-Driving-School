@@ -120,12 +120,6 @@ def sidebar_html(depth):
         {centres}
       </ul>
     </div>
-    <div class="sidebar-box">
-      <h3>Driving Instructor Areas We Serve</h3>
-      <ul class="sidebar-links">
-        {areas}
-      </ul>
-    </div>
     <div class="sidebar-box sidebar-cta">
       <p>Ready to book a lesson?</p>
       <a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I''d%20like%20to%20book%20a%20driving%20lesson.">Chat on WhatsApp</a>
@@ -221,7 +215,7 @@ def footer_html(depth):
       <div>
         <h4>Areas We Serve</h4>
         <ul>
-          {areas}
+          <li><a href="{p}index.html#areas">All 26 suburbs</a></li>
         </ul>
       </div>
       <div>
@@ -311,7 +305,7 @@ GA4_SNIPPET = '''<!-- Google tag (gtag.js) -->
 </script>
 '''
 
-SEARCH_CONSOLE_META = '<meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_CODE_HERE">\n'
+SEARCH_CONSOLE_META = ''
 
 def page_shell(title, description, depth, body_content, page_key, extra_head="", schema="",
                breadcrumbs=None, show_sidebar=True):

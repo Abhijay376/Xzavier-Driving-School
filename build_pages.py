@@ -162,6 +162,114 @@ SUBURB_LOCAL_FACTS = {
     "Oakleigh": ["Oakleigh train station", "the Eaton Mall dining precinct"],
 }
 
+# Per-suburb content written for each page individually.
+SUBURB_PROFILES = {
+"Noble Park": {
+ "intro": "Noble Park sits between Springvale and Dandenong, and a lot of our learners here are students or shift workers who need early or late lessons. The suburb mixes quiet residential grids with some of the busiest arterial roads in the south east, so it is a good place to build confidence quickly.",
+ "roads": ["Turning across traffic on the Princes Highway, where the gaps are short and drivers move fast", "Heatherton Road and Corrigan Road intersections, which have multiple turning lanes and arrows", "Parking and pulling out around the Buckley Street shops, where pedestrians cross between cars"],
+ "tip": "Most Noble Park learners struggle with lane choice on multi-lane roads. We spend time on reading lane arrows early, so you are in the right lane well before the intersection."},
+"Hallam": {
+ "intro": "Hallam is a small suburb wedged between Dandenong and Narre Warren, but it sits on some of the busiest freeway and highway links in the area. Learners here often need to get used to fast merging much earlier than they expect.",
+ "roads": ["Merging onto the Monash Freeway and the Hallam Bypass, where you need to match speed before you join", "Hallam Road, with its mix of school traffic and trucks", "The Princes Highway service lanes, which catch out new drivers who miss the entry point"],
+ "tip": "We practise freeway merges on quieter times first, then build up to peak traffic. Confident merging is one of the things testers notice straight away."},
+"Hampton Park": {
+ "intro": "Hampton Park is mostly residential, with long curving streets, lots of roundabouts and plenty of families learning together. It is a calm place to start, but the main roads around it are busy.",
+ "roads": ["Roundabouts along Hallam Road and through the estates, where giving way correctly matters", "Pound Road and Somerville Road, which carry fast traffic past side streets", "School zones around the local primary and secondary schools at drop-off and pick-up times"],
+ "tip": "Roundabouts are the most common reason Hampton Park learners lose marks. We drill signalling on exit and choosing the right lane on the bigger two-lane ones."},
+"Berwick": {
+ "intro": "Berwick has a busy village centre, hilly streets and fast roads on every side. Many of our Berwick learners are Year 11 and 12 students fitting lessons around school.",
+ "roads": ["High Street in Berwick Village, with angle parking, pedestrian crossings and slow traffic", "Hill starts and blind crests on the streets around the village", "Clyde Road and Berwick-Cranbourne Road, which are busy and keep changing as the area grows"],
+ "tip": "Hill starts and checking blind spots when pulling out of angle parks are the two skills we focus on most here, because they come up so often around Berwick."},
+"Cranbourne": {
+ "intro": "Cranbourne is a large and fast-growing suburb with a mix of older streets near the town centre and newer estates further out. Learners here often have long drives to work or study, so they need to be confident on high-speed roads.",
+ "roads": ["The South Gippsland Highway through the town centre, with traffic lights close together", "Sladen Street and Thompsons Road, where roadworks and lane changes are common", "Newer estates with narrow streets, parked cars on both sides and lots of roundabouts"],
+ "tip": "Because Cranbourne roads change so often, we teach you to read signs and lane markings rather than rely on memory. That habit carries straight into the test."},
+"Narre Warren": {
+ "intro": "Narre Warren is home to Fountain Gate, one of the biggest shopping centres in Melbourne, and the traffic around it can be hard for new drivers. Outside the centre the suburb is mostly quiet residential streets.",
+ "roads": ["Car parks and entry roads around Fountain Gate, with pedestrians, trolleys and people reversing", "The Princes Highway and Narre Warren-Cranbourne Road, which are busy for most of the day", "Webb Street and the streets around the train station"],
+ "tip": "We use the roads near Fountain Gate to practise scanning for hazards. Seeing a pedestrian or a reversing car early is exactly what the test is looking for."},
+"Pakenham": {
+ "intro": "Pakenham has its own VicRoads test centre, so most local learners sit their test only a few minutes from home. That means the roads you practise on every week are likely to be the roads you are tested on.",
+ "roads": ["Main Street and the town centre, with parked cars, crossings and slow traffic", "The Princes Highway and the freeway ramps on the edge of town", "Newer estates with roundabouts, speed humps and changing speed limits"],
+ "tip": "Because the test centre is in town, we can run full mock tests on the real local roads. Learners who do one or two mock tests usually go in far more relaxed."},
+"Frankston": {
+ "intro": "Frankston is a big bayside suburb at the end of the Frankston line. The VicRoads test centre for this area is a short drive away in Seaford, so most Frankston learners test close to home.",
+ "roads": ["Nepean Highway and the Frankston city centre, with trucks, buses and lots of pedestrians", "Cranbourne Road and the Peninsula Link ramps, where traffic is fast", "Hilly residential streets with parked cars and tight turns"],
+ "tip": "Frankston city centre is a great place to practise patience and observation. We work on keeping a safe gap and not rushing turns when traffic is heavy."},
+"Carrum Downs": {
+ "intro": "Carrum Downs is one of the closest suburbs to the VicRoads test centre in Seaford. It has a large industrial area, so learners here get used to sharing the road with trucks early on.",
+ "roads": ["Frankston-Dandenong Road, where trucks and fast traffic share the lanes", "Hall Road and the roundabouts near the shopping centre", "EastLink entry and exit ramps on the edge of the suburb"],
+ "tip": "We teach you how to give trucks the space they need, especially when they turn. Driving calmly around heavy vehicles is a skill testers pay attention to."},
+"Heatherton": {
+ "intro": "Heatherton is where one of the main VicRoads test centres in the south east is located, on Corporate Drive. Learners from all over the area come here for their test, so knowing these roads is a real advantage.",
+ "roads": ["Warrigal Road and Centre Dandenong Road, which are wide, busy and have lots of turning lanes", "Kingston Road, with changing speed limits", "Business park roads near the test centre, with parked trucks and driveways"],
+ "tip": "Local learners have the benefit of driving the test area during normal lessons. We make sure you are comfortable with the busiest intersections near the centre, not just the quiet streets."},
+"Springvale": {
+ "intro": "Springvale is a busy, multicultural centre known for its food and markets. Many of our Springvale learners are overseas licence holders who already drive but need to learn Victorian road rules and test habits.",
+ "roads": ["Springvale Road through the shopping area, with heavy traffic, buses and people crossing", "The Princes Highway and Centre Road intersections", "Side streets near the market and station where parking is tight"],
+ "tip": "Overseas drivers often have good car control but lose marks on observation and road rules. We focus on head checks, full stops and giving way the Victorian way."},
+"Keysborough": {
+ "intro": "Keysborough has newer estates on one side and fast roads and industrial areas on the other. It sits close to the Heatherton test centre, so many local learners test there.",
+ "roads": ["Cheltenham Road and Perry Road, with fast traffic and long straight sections", "The Dingley Bypass and EastLink, where speeds are high", "Estate streets with roundabouts and parked cars"],
+ "tip": "Keysborough learners often need to practise keeping to the speed limit on long, straight roads. We work on checking your speedometer without losing focus on the road."},
+"Endeavour Hills": {
+ "intro": "Endeavour Hills is a hilly residential suburb with winding streets and lots of courts and cul-de-sacs. It is a good place to build low-speed control and practise turning around safely.",
+ "roads": ["Hill starts and steep driveways throughout the suburb", "Heatherton Road, which is busy and has several traffic lights close together", "Winding streets with blind corners, where you need to keep left and slow down"],
+ "tip": "Three-point turns and reverse parking on a slope come up a lot here. We practise them until they feel easy, because they are often part of the test."},
+"Doveton": {
+ "intro": "Doveton is a small, established suburb right next to Dandenong. It is close to our base, so we can often fit Doveton lessons in at short notice.",
+ "roads": ["The Princes Highway, where you need to turn across several lanes of traffic", "Power Road and Kidds Road intersections", "Older residential streets with narrow lanes and parked cars"],
+ "tip": "Many Doveton learners are nervous about the Princes Highway. We build up slowly, starting with left turns before moving on to right turns across traffic."},
+"Clayton": {
+ "intro": "Clayton is home to Monash University and Monash Medical Centre, so a lot of our Clayton learners are university students and hospital staff with busy schedules.",
+ "roads": ["Clayton Road, which is busy with buses, students and hospital traffic", "North Road and Centre Road, with lots of traffic lights and turning lanes", "Streets around the university, where pedestrians and cyclists are everywhere"],
+ "tip": "Clayton is a good place to practise watching for cyclists and pedestrians. We focus on checking mirrors and blind spots before every turn."},
+"Clayton South": {
+ "intro": "Clayton South, including the Clarinda area, is mostly quiet residential streets with a few busy roads running through. It is very close to the Heatherton test centre.",
+ "roads": ["Centre Road and Clayton Road, which are busy at peak times", "Heatherton Road and the roads leading towards the test centre", "Quiet streets that are good for practising parking and turns"],
+ "tip": "Being so close to Heatherton, we can practise on the main roads near the test centre during normal lessons, which takes a lot of the surprise out of test day."},
+"Mulgrave": {
+ "intro": "Mulgrave sits next to the Monash Freeway and has big roads, large intersections and shopping centres. Learners here need to get comfortable with fast, multi-lane traffic.",
+ "roads": ["Springvale Road and Wellington Road, which have many lanes and turning arrows", "Monash Freeway entry and exit ramps", "Shopping centre car parks around Waverley Gardens"],
+ "tip": "Lane changes are a key skill in Mulgrave. We practise signalling, checking mirrors and blind spots, and then moving over smoothly without slowing down."},
+"Wheelers Hill": {
+ "intro": "Wheelers Hill is a leafy, hilly suburb with lots of quiet streets and a few busy main roads. It suits learners who want to build confidence before moving onto heavier traffic.",
+ "roads": ["Ferntree Gully Road, which is fast and busy at peak times", "Jells Road and the hills around Jells Park", "Quiet residential streets for parking, turns and hill starts"],
+ "tip": "Because of the hills, we focus on controlling your speed going downhill and moving off smoothly uphill. Both come up often around Wheelers Hill."},
+"Rowville": {
+ "intro": "Rowville is a family suburb with lots of roundabouts, school zones and a busy shopping area around Stud Park. Many of our learners here are teenagers learning with help from their parents.",
+ "roads": ["Stud Road and Wellington Road, which are busy and have several lanes", "Roundabouts throughout the suburb", "School zones, which have lower speed limits at set times"],
+ "tip": "We give Rowville learners a simple practice plan to use with their parents between lessons, so the hours you log at home actually help you pass."},
+"Lynbrook": {
+ "intro": "Lynbrook is a newer, smaller suburb with modern estates and quick access to the freeway. Its quiet streets are great for beginners, but you are only a few minutes from fast roads.",
+ "roads": ["Evans Road and the roads around Lynbrook station", "The South Gippsland Freeway and Western Port Highway nearby", "Estate streets with roundabouts and parked cars"],
+ "tip": "We use Lynbrook's quiet streets for your first lessons, then move to nearby highways once your basic control is solid."},
+"Lyndhurst": {
+ "intro": "Lyndhurst is a growing area with new estates next to busy highways and industrial land. Learners here need to be ready for trucks and high speeds as well as quiet estate streets.",
+ "roads": ["The Western Port Highway and South Gippsland Highway, with trucks and fast traffic", "Thompsons Road, which is busy and often has roadworks", "New estate streets where the layout keeps changing"],
+ "tip": "Following distance is the big one in Lyndhurst. We teach you to keep a safe gap behind trucks and to give yourself room to stop."},
+"Clyde": {
+ "intro": "Clyde has grown very fast in recent years, with new estates and roads opening all the time. Learners here often deal with roadworks, temporary signs and changing speed limits.",
+ "roads": ["Clyde Road and Ballarto Road, which are being upgraded in stages", "New estate streets with roundabouts and lots of construction traffic", "Thompsons Road as you head towards Cranbourne and Berwick"],
+ "tip": "Roadworks are a common test hazard. We practise reading temporary signs and lowering your speed early, which is exactly what testers want to see."},
+"Clyde North": {
+ "intro": "Clyde North is one of the newest areas in the south east, with brand new estates, schools and shops. Many families here have learners getting ready for their test at the same time.",
+ "roads": ["Berwick-Cranbourne Road and Soldiers Road, which are busy and growing", "New estate roundabouts and narrow streets with parked cars", "School zones around the new schools"],
+ "tip": "New estates can make learners too relaxed. We practise staying alert for kids, parked cars and people pulling out of driveways."},
+"Officer": {
+ "intro": "Officer sits between Beaconsfield and Pakenham and is growing quickly. It is close to the Pakenham test centre, so most local learners test there.",
+ "roads": ["The Princes Highway and Princes Freeway ramps", "Station Street and the roads around Officer station", "New estates with roundabouts and changing layouts"],
+ "tip": "We spend time on the roads between Officer and Pakenham, so the trip to the test centre and the roads around it feel familiar."},
+"Beaconsfield": {
+ "intro": "Beaconsfield is a quiet suburb at the foot of the hills, with a small shopping strip and quick access to the highway. The hilly roads make it great for building control.",
+ "roads": ["The Princes Highway and Old Princes Highway", "O'Neil Road and the streets around the shops", "Hilly, winding roads heading up towards the Dandenong Ranges"],
+ "tip": "Winding roads teach you to slow down before a bend, not in it. That skill makes a big difference to how smooth and safe your driving looks on test day."},
+"Oakleigh": {
+ "intro": "Oakleigh is an older suburb with a busy shopping and food strip around Eaton Mall and Atherton Road. Streets here are narrower and busier than in the outer suburbs.",
+ "roads": ["Warrigal Road and Dandenong Road, which are busy and have many lanes", "Atherton Road and the streets around Eaton Mall, with lots of pedestrians", "Narrow side streets with parked cars on both sides"],
+ "tip": "Narrow streets mean you often need to give way to oncoming cars. We practise judging gaps and pulling over safely so you stay calm in tight spots."},
+}
+
 # NAP (Name / Address / Phone). Address sourced from an old repo, NOT confirmed
 # by the user; flagged clearly in the build log and final summary.
 NAP_NAME = "X Zavier Driving School (XDS)"
@@ -186,7 +294,7 @@ TIER_INFO = {
     "recognised": {
         "label": "Recognised Country",
         "summary": "Direct exchange, with no knowledge or practical test required in most cases.",
-        "requirement": "No age or experience requirement in most cases.",
+        "requirement": "No. You need a current full licence (not a learner or provisional licence), but age and years of experience do not change the requirement.",
     },
     "edr": {
         "label": "Experienced Driver Recognition Country",
@@ -196,38 +304,59 @@ TIER_INFO = {
     "other": {
         "label": "Full Victorian Licensing Process",
         "summary": "The full Victorian process applies: a knowledge test, a hazard perception test, and a practical driving test.",
-        "requirement": "Applies regardless of age or driving experience.",
+        "requirement": "No. Since Experienced Driver Recognition ended in Victoria on 30 April 2025, the same three tests apply whatever your age or years of driving.",
     },
 }
 
 COUNTRIES = [
     {
-        "name": "India", "slug": "india", "tier": "edr",
-        "note": "Indian driving licences fall under Victoria&rsquo;s Experienced Driver Recognition tier. Requirements depend on your age and years of driving experience on your Indian licence.",
+        "name": "India", "slug": "india", "tier": "other",
+        "note": "Indian licences are not on Victoria&rsquo;s recognised country list. Experienced Driver Recognition, which some websites still mention, ended in Victoria on 30 April 2025, so Indian licence holders now complete all three tests whatever their age or experience.",
+        "side": "India drives on the left, like Australia, so the road layout will feel familiar.",
+        "language": "Most Indian licences show your details in English. If any part of yours is not in English, get a NAATI-certified translation. VicRoads can also check your licence with the Indian Consulate if it cannot verify it another way.",
+        "habits": ["Coming to a full stop at stop signs, even when the road looks clear", "Giving way to traffic already on a roundabout, and signalling left as you leave it", "Sticking to the speed limit exactly, including 40 km/h school zones", "Not using the horn except to warn of danger"],
     },
     {
-        "name": "Philippines", "slug": "philippines", "tier": "edr",
-        "note": "Philippine driving licences fall under Victoria&rsquo;s Experienced Driver Recognition tier. Requirements depend on your age and years of driving experience on your Philippine licence.",
+        "name": "Philippines", "slug": "philippines", "tier": "other",
+        "note": "Philippine licences are not on Victoria&rsquo;s recognised country list, and Experienced Driver Recognition ended in Victoria on 30 April 2025. That means Philippine licence holders now complete all three tests.",
+        "side": "The Philippines drives on the right, so this is the biggest change. Turning right across traffic, entering roundabouts clockwise and keeping left all take practice.",
+        "language": "Philippine LTO licences are issued in English, so a translation is not usually needed.",
+        "habits": ["Keeping left, especially after turning into a quiet street", "Looking right first at intersections and roundabouts", "Turning right into the correct lane, not the far lane", "Head checks over your right shoulder before changing lanes"],
     },
     {
         "name": "China", "slug": "china", "tier": "other",
-        "note": "Chinese driving licences are not currently on Victoria&rsquo;s Recognised or Experienced Driver Recognition lists, so the full Victorian licensing process applies.",
+        "note": "Chinese licences are not on Victoria&rsquo;s recognised country list, so the full Victorian licensing process applies.",
+        "side": "China drives on the right, so you will need to retrain your habits for left-side driving, including where you look first at intersections.",
+        "language": "Chinese licences are not in English, so you need a NAATI-certified translation or one from the Chinese Consulate. If you want to sit a test in Chinese or need an interpreter, VicRoads asks you to book an in-person appointment.",
+        "habits": ["Keeping left, especially after turns", "Looking right first when entering roundabouts and side roads", "Giving way to pedestrians when turning", "Using the full width of your lane, not hugging the centre line"],
     },
     {
         "name": "Sri Lanka", "slug": "sri-lanka", "tier": "other",
-        "note": "Sri Lankan driving licences are not currently on Victoria&rsquo;s Recognised or Experienced Driver Recognition lists, so the full Victorian licensing process applies.",
+        "note": "Sri Lankan licences are not on Victoria&rsquo;s recognised country list, so the full Victorian licensing process applies.",
+        "side": "Sri Lanka drives on the left, like Australia, so the road layout will feel familiar.",
+        "language": "Check whether every detail on your licence is in English. If any part is in Sinhala or Tamil only, get a NAATI-certified translation.",
+        "habits": ["Full stops at stop signs and staying behind the line", "Keeping a safe following distance on fast roads", "Checking blind spots with a head check, not just mirrors", "Waiting for a safe gap rather than edging into traffic"],
     },
     {
         "name": "Pakistan", "slug": "pakistan", "tier": "other",
-        "note": "Pakistani driving licences are not currently on Victoria&rsquo;s Recognised or Experienced Driver Recognition lists, so the full Victorian licensing process applies.",
+        "note": "Pakistani licences are not on Victoria&rsquo;s recognised country list, so the full Victorian licensing process applies.",
+        "side": "Pakistan drives on the left, like Australia, so the road layout will feel familiar.",
+        "language": "Check whether every detail on your licence is in English. If any part is in Urdu only, get a NAATI-certified translation.",
+        "habits": ["Staying in your lane and signalling every lane change", "Giving way correctly at roundabouts and T-intersections", "Keeping to speed limits and slowing for school zones", "Full stops at stop signs"],
     },
     {
         "name": "Nepal", "slug": "nepal", "tier": "other",
-        "note": "Nepalese driving licences are not currently on Victoria&rsquo;s Recognised or Experienced Driver Recognition lists, so the full Victorian licensing process applies.",
+        "note": "Nepalese licences are not on Victoria&rsquo;s recognised country list, so the full Victorian licensing process applies.",
+        "side": "Nepal drives on the left, like Australia. If most of your driving was on hilly or narrow roads, multi-lane roads and freeways in Melbourne may take some getting used to.",
+        "language": "Check whether every detail on your licence is in English. If any part is in Nepali only, get a NAATI-certified translation.",
+        "habits": ["Merging onto freeways at the right speed", "Choosing the correct lane on multi-lane roads", "Head checks before changing lanes", "Keeping a steady speed that matches the limit"],
     },
     {
         "name": "United Kingdom", "slug": "uk", "tier": "recognised",
-        "note": "UK driving licences are on Victoria&rsquo;s Recognised country list, meaning a direct exchange is usually possible with no test required.",
+        "note": "UK licences are on Victoria&rsquo;s recognised country list, so a full UK car licence can usually be swapped for a Victorian licence without a knowledge or drive test.",
+        "side": "The UK drives on the left, and most road rules are similar. Speeds are in km/h, and there are some rules that catch UK drivers out, like hook turns in Melbourne&rsquo;s CBD.",
+        "language": "UK licences are in English, so no translation is needed. A UK provisional licence is a learner licence, not a full licence, so it does not qualify for a direct swap.",
+        "habits": ["Remembering speeds are in km/h, not mph", "Giving way at roundabouts to vehicles already on them, which works the same as in the UK", "Hook turns at signed intersections in the Melbourne CBD", "40 km/h school zones at set times"],
     },
 ]
 
@@ -286,12 +415,6 @@ SCHEMA = '''<script type="application/ld+json">
   "email": "xzavierdrivingschool@gmail.com",
   "url": "https://drivetestvic.com.au",
   "areaServed": ["Dandenong", "Frankston", "Mooroolbark", "Pakenham", "Heatherton", "South East Melbourne"],
-  "keywords": "driving school Dandenong, driving lessons Dandenong, Dandenong driving instructor, VicRoads test preparation Dandenong",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "105"
-  },
   "sameAs": ["https://share.google/PSBVWeY83VacVhKtu"],
   "employee": {
     "@type": "Person",
@@ -319,7 +442,7 @@ SCHEMA = '''<script type="application/ld+json">
     {
       "@type": "Question",
       "name": "I passed my test overseas, do I still need to sit a VicRoads test?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on which country issued your licence. Recognised countries can usually exchange directly, Experienced Driver Recognition countries may need a knowledge and/or practical test depending on age, and all other countries require the full Victorian licensing process. Run it through our free Overseas Licence Conversion Checker for an instant, specific answer." }
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends entirely on which country issued your licence. Recognised countries can usually swap directly, and all other countries need the knowledge, hazard perception and drive tests. Run it through our free Overseas Licence Conversion Checker for an instant, specific answer." }
     },
     {
       "@type": "Question",
@@ -365,11 +488,6 @@ def centre_schema(name):
     "@type": "GeoCoordinates",
     "latitude": {lat},
     "longitude": {lon}
-  }},
-  "aggregateRating": {{
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "105"
   }},
   "sameAs": ["https://share.google/PSBVWeY83VacVhKtu"]
 }}
@@ -611,9 +729,8 @@ TOOLS_HOME_SECTION = '''<section class="block" id="tools">
             <label>Which country issued your licence?</label>
             <select id="miniCountrySelect">
               <option value="">Select country</option>
-              <option value="recognised">UK, Ireland, Canada, Germany, Japan, South Korea</option>
-              <option value="edr">India, USA, South Africa, Philippines, Malaysia</option>
-              <option value="other">Other country not listed</option>
+              <option value="recognised">UK, Ireland, USA, Canada, New Zealand, Germany, Japan, Singapore</option>
+              <option value="other">India, Philippines, China, Sri Lanka, Pakistan, Nepal or any other country</option>
             </select>
           </div>
           <div class="tool-field">
@@ -1000,9 +1117,24 @@ def country_page(country):
 
     intro = '''<section class="block">
     <div class="container" style="max-width:800px">
-      <p style="font-size:1rem;color:#334155">If you&rsquo;re moving to Victoria with a {name} driving licence and want to convert overseas licence Victoria requirements into a plain checklist, you&rsquo;re in the right place. This guide covers exactly what a {name} licence holder needs to do to convert their licence to a Victorian one, and it forms part of our broader guide to convert international licence Melbourne newcomers can follow for any country.</p>
+      <p style="font-size:1rem;color:#334155">If you plan to live in Victoria for more than 6 months, VicRoads says you must convert your overseas licence to a Victorian one. The 6 months starts from the day you first begin living in Victoria. Here is what that means for someone holding a {name} licence.</p>
     </div>
-  </section>'''.format(name=name)
+  </section>
+  <section class="block">
+    <div class="container" style="max-width:800px">
+      <div class="section-title"><h2>Things {name} Licence Holders Should Know</h2></div>
+      <ul class="bullet-list">
+        <li><strong>Driving side:</strong> {side}</li>
+        <li><strong>Translation:</strong> {language}</li>
+      </ul>
+      <h3 style="margin:22px 0 10px">Habits we work on with {name} drivers</h3>
+      <ul class="bullet-list">
+        {habits}
+      </ul>
+      <p style="font-size:.85rem;color:var(--muted);margin-top:16px">Rules change. Always confirm your exact requirements with the <a href="https://www.vicroads.vic.gov.au/licences/new-to-victoria/convert-your-overseas-licence" target="_blank" rel="noopener">VicRoads requirements checker</a> before you book anything.</p>
+    </div>
+  </section>'''.format(name=name, side=country["side"], language=country["language"],
+                     habits="".join("<li>{0}</li>".format(h) for h in country["habits"]))
 
     tier_card = '''<section class="block block-alt">
     <div class="container">
@@ -1013,7 +1145,7 @@ def country_page(country):
           <p style="font-size:.85rem;color:var(--muted)">{note}</p>
         </div>
         <div class="info-card">
-          <h3 style="margin-bottom:10px">Age / Experience Requirement</h3>
+          <h3 style="margin-bottom:10px">Does age or experience change this?</h3>
           <p style="font-size:.88rem;color:var(--muted)">{requirement}</p>
           <div style="margin-top:16px"><a href="licence-checker.html" class="tool-link">Use the full interactive checker for your exact pathway &rarr;</a></div>
         </div>
@@ -1025,7 +1157,7 @@ def country_page(country):
     <div class="container">
       <div class="section-title"><h2>Step-by-Step: {name} Licence to Victorian Licence</h2></div>
       <ol class="step-list" style="max-width:700px;margin:0 auto">
-        <li><h3>Confirm your tier</h3><p>Use our checker to confirm your {name} licence falls under the {label} tier before starting the process.</p></li>
+        <li><h3>Check with VicRoads</h3><p>Run your details through the VicRoads requirements checker to confirm what applies to your {name} licence.</p></li>
         <li><h3>Gather your documents</h3><p>Valid {name} licence, passport/visa, proof of Victorian address, and an official English translation if your licence isn&rsquo;t in English.</p></li>
         <li><h3>Book any required tests</h3><p>{summary}</p></li>
         <li><h3>Prepare with a local instructor</h3><p>If a practical test is required, XDS instructors can prepare you for your specific VicRoads test centre. See our guides for Frankston, Mooroolbark, Pakenham and Heatherton.</p></li>
@@ -1040,7 +1172,7 @@ def country_page(country):
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need a driving test to convert my {name} licence in Victoria?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">{summary} Use our checker above (link) to confirm your exact requirement based on your age and experience.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">{summary} You can confirm this with our <a href="licence-checker.html">licence checker</a> or the VicRoads requirements checker.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How can XDS help me convert my {name} licence?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
@@ -1053,8 +1185,8 @@ def country_page(country):
     body = '\n  '.join([hero, trust_section_html(), intro, tier_card, steps, faq, TOOLS_LINKS_SECTION])
 
     html = page_shell(
-        title="{name} to VicRoads Licence Conversion | Checker &amp; Steps".format(name=name),
-        description="How to convert a {name} driving licence to a Victorian VicRoads licence: your tier, requirements and step-by-step process. Check your pathway free.".format(name=name),
+        title="{name} Driving Licence Conversion in Victoria | XDS".format(name=name),
+        description="What {name} licence holders need to do to get a Victorian licence: tests, translation, and the driving habits to work on before your VicRoads test.".format(name=name),
         depth=0,
         body_content=body,
         page_key="licence-checker",
@@ -1171,9 +1303,8 @@ CHECKER_BODY = '\n  '.join([
           <label>Which country issued your current licence?</label>
           <select id="fullCountrySelect">
             <option value="">Select country</option>
-            <option value="recognised">Recognised country (UK, Ireland, Canada, France, Germany, Japan, South Korea, Austria, Switzerland)</option>
-            <option value="edr">Experienced Driver Recognition country (India, USA, South Africa, Philippines, Malaysia, Zimbabwe)</option>
-            <option value="other">Other country not listed</option>
+            <option value="recognised">Recognised country (UK, Ireland, USA, Canada, New Zealand, France, Germany, Japan, Singapore and others)</option>
+            <option value="other">Any other country (including India, Philippines, China, Sri Lanka, Pakistan, Nepal)</option>
           </select>
         </div>
         <div class="tool-field">
@@ -1192,16 +1323,15 @@ CHECKER_BODY = '\n  '.join([
     '''<section class="block block-alt">
     <div class="container">
       <div class="section-title">
-        <h2>Victoria&rsquo;s 3-Tier Overseas Licence System</h2>
-        <p>Every country falls into one of three tiers, which determines what, if anything, you need to do to convert your licence in Victoria.</p>
+        <h2>Victoria&rsquo;s Overseas Licence Rules</h2>
+        <p>Since Experienced Driver Recognition ended on 30 April 2025, there are two groups: recognised countries, and everyone else.</p>
       </div>
       <div class="table-wrap">
         <table class="req-table">
           <thead><tr><th>Tier</th><th>Example countries</th><th>Age / experience requirement</th><th>What&rsquo;s required</th></tr></thead>
           <tbody>
-            <tr><td><strong>1. Recognised country</strong></td><td>UK, Ireland, Canada, Germany, Japan, South Korea</td><td>No specific requirement</td><td>Direct exchange, no test in most cases</td></tr>
-            <tr><td><strong>2. Experienced Driver Recognition</strong></td><td>India, USA, South Africa, Philippines, Malaysia</td><td>Under 25 usually needs knowledge + practical test; 25+ with 3+ years&rsquo; experience may qualify for a more direct pathway</td><td>Knowledge test, and often a practical drive test, depending on age/experience</td></tr>
-            <tr><td><strong>3. Other country</strong></td><td>All countries not listed under tiers 1 or 2</td><td>Applies regardless of age or experience</td><td>Full Victorian process: knowledge test, hazard perception test, practical driving test</td></tr>
+            <tr><td><strong>Recognised country</strong></td><td>Austria, Belgium, Bosnia and Herzegovina, Canada, Croatia, Denmark, Finland, France, Germany, Greece, Guernsey, Ireland, Isle of Man, Italy, Japan, Jersey, Luxembourg, Malta, Netherlands, New Zealand, Norway, Portugal, Singapore, Spain, Sweden, Switzerland, United Kingdom, USA</td><td>Needs a current full licence</td><td>Direct swap, no knowledge or drive test in most cases</td></tr>
+            <tr><td><strong>All other countries</strong></td><td>Including India, Philippines, China, Sri Lanka, Pakistan, Nepal</td><td>Same for every age and experience level</td><td>Road rules knowledge test, hazard perception test and practical drive test</td></tr>
           </tbody>
         </table>
       </div>
@@ -1213,10 +1343,10 @@ CHECKER_BODY = '\n  '.join([
         <h2>Step-by-Step Conversion Process</h2>
       </div>
       <ol class="step-list" style="max-width:700px;margin:0 auto">
-        <li><h3>Check your tier</h3><p>Use the checker above to confirm whether your issuing country is Recognised, Experienced Driver Recognition, or Other.</p></li>
+        <li><h3>Check your group</h3><p>Use the checker above, then confirm with the VicRoads requirements checker.</p></li>
         <li><h3>Gather your documents</h3><p>Valid overseas licence, passport/visa, proof of address, and an official translation if your licence isn&rsquo;t in English.</p></li>
-        <li><h3>Book a knowledge test (if required)</h3><p>Tiers 2 and 3 generally require a computer-based knowledge test on Victorian road rules.</p></li>
-        <li><h3>Complete a hazard perception test (Tier 3)</h3><p>Required as part of the full licensing process for countries not covered by an exchange or recognition agreement.</p></li>
+        <li><h3>Sit the knowledge test (if required)</h3><p>Licences from non-recognised countries need a road rules knowledge test.</p></li>
+        <li><h3>Complete the hazard perception test (if required)</h3><p>VicRoads lets you take this online, and offers a free practice test.</p></li>
         <li><h3>Take your practical drive test</h3><p>Where required, XDS instructors can prepare you specifically for your local VicRoads test centre. See our test centre guides for Frankston, Mooroolbark, Pakenham and Heatherton.</p></li>
         <li><h3>Receive your Victorian licence</h3><p>Once you pass the required steps, your Victorian driver licence is issued and your overseas licence is typically surrendered.</p></li>
       </ol>
@@ -1227,7 +1357,7 @@ CHECKER_BODY = '\n  '.join([
       <div class="section-title">
         <span class="eyebrow">Country-Specific Guides</span>
         <h2>Converting From a Specific Country?</h2>
-        <p>We&rsquo;re building detailed, country-specific conversion guides, each covering your exact tier, requirements, and step-by-step process.</p>
+        <p>Guides for the countries our students most often come from.</p>
       </div>
       <div class="area-grid" id="countryLinksGrid">
         {country_links}
@@ -1247,15 +1377,15 @@ CHECKER_BODY = '\n  '.join([
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">Do I need a driving test to convert my licence in Victoria?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">Only if your issuing country isn&rsquo;t in the Recognised tier. Experienced Driver Recognition countries may need a practical test depending on your age and experience, and all other countries require the full Victorian driving test.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Only if your licence is not from a recognised country. Everyone else needs the knowledge test, hazard perception test and drive test.</div></div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is the recognised country driving licence list for Victoria?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">Recognised countries, including the UK, Ireland, Canada, France, Germany, Japan, South Korea, Austria and Switzerland, can generally exchange their licence directly for a Victorian one with no test, subject to standard eligibility checks.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">It includes the UK, Ireland, the USA, Canada, New Zealand, Singapore, Japan and most of Western Europe. The full list is in the table above. Holders of a full licence from these countries can generally swap it for a Victorian licence without a test.</div></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What is an Experienced Driver Recognition country?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">A tier that includes countries such as India, the USA, South Africa, the Philippines and Malaysia. Requirements depend on your age and years of driving experience, typically a knowledge test, and a practical test if you&rsquo;re under 25 or have less experience.</div></div>
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">What happened to Experienced Driver Recognition?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">It ended in Victoria on 30 April 2025. Drivers from countries that used to be on that list now follow the same process as other non-recognised countries.</div></div>
         </div>
       </div>
     </div>
@@ -1393,43 +1523,45 @@ for c in COUNTRIES:
 # ============================================================
 def suburb_page(suburb):
     slug = slugify(suburb)
+    profile = SUBURB_PROFILES[suburb]
     centre_name, centre_href = SUBURB_TEST_CENTRE[suburb]
-    nearest20 = nearest_n_suburbs(suburb, 20)
+    cg = CENTRE_GEO[centre_name]
+    centre_km = round(haversine_km(SUBURB_COORDS[suburb], (cg["lat"], cg["lon"])))
+    nearest20 = nearest_n_suburbs(suburb, 5)
     wikidata = SUBURB_WIKIDATA.get(suburb)
     lat, lon = SUBURB_COORDS[suburb]
     map_query = suburb.replace(" ", "+") + "+VIC+Australia"
 
     is_own_centre = (suburb == centre_name)
     centre_line = (
-        "VicRoads {c} is right here in {s}, so it&rsquo;s the natural test centre for local learners.".format(c=centre_name, s=suburb)
+        "VicRoads {c} ({addr}) is right here in {s}, so most local learners sit their test close to home.".format(c=centre_name, s=suburb, addr=cg["address"])
         if is_own_centre else
-        "The nearest VicRoads drive test centre to {s} is <a href=\"{href}\">VicRoads {c}</a>. Our instructors prepare {s} learners specifically for that centre's local test roads.".format(s=suburb, href=centre_href, c=centre_name)
+        "Most {s} learners sit their test at <a href=\"{href}\">VicRoads {c}</a> ({addr}), roughly {km} km away in a straight line.".format(s=suburb, href=centre_href, c=centre_name, addr=cg["address"], km=centre_km)
     )
 
     hero = '''<section class="page-hero">
     <div class="container">
-      <h1>Driving School {suburb}</h1>
-      <p>Local, VicRoads ADI accredited driving lessons for {suburb} learners, with pickup included and test preparation for your nearest VicRoads test centre.</p>
+      <h1>Driving Lessons in {suburb}</h1>
+      <p>Driving lessons in {suburb} with pickup from home, school or work, and test preparation for VicRoads {centre}.</p>
       {byline}
     </div>
-  </section>'''.format(suburb=suburb, byline=BYLINE)
+  </section>'''.format(suburb=suburb, byline=BYLINE, centre=centre_name)
 
     intro = '''<section class="block">
     <div class="container" style="max-width:800px">
-      <p style="font-size:1rem;color:#334155">Looking for a <strong>driving school {suburb}</strong> learners actually recommend? X Zavier Driving School (XDS) provides <strong>driving lessons {suburb}</strong> residents can book with flexible, VicRoads ADI accredited instructors, with pickup and drop-off from home, school or work, so you don&rsquo;t need to travel to us.</p>
+      <p style="font-size:1rem;color:#334155">{intro}</p>
     </div>
-  </section>'''.format(suburb=suburb)
+  </section>'''.format(intro=profile["intro"])
 
-    facts = SUBURB_LOCAL_FACTS.get(suburb, [])
-    facts_html = "".join('<li>Our instructors know {suburb} well, including areas like {fact}.</li>'.format(suburb=suburb, fact=f) for f in facts)
+    roads_html = "".join('<li>{0}</li>'.format(r) for r in profile["roads"])
     local_knowledge = '''<section class="block">
     <div class="container" style="max-width:800px">
-      <div class="section-title"><h2>Local Knowledge: {suburb}</h2></div>
+      <div class="section-title"><h2>What You Will Practise in {suburb}</h2></div>
       <ul class="bullet-list">
-        {facts}
+        {roads}
       </ul>
     </div>
-  </section>'''.format(suburb=suburb, facts=facts_html) if facts_html else ""
+  </section>'''.format(suburb=suburb, roads=roads_html)
 
     centre_card = '''<section class="block block-alt">
     <div class="container">
@@ -1440,21 +1572,16 @@ def suburb_page(suburb):
           <div style="margin-top:14px"><a href="{href}" class="tool-link">View the full {c} test centre guide &rarr;</a></div>
         </div>
         <div class="info-card">
-          <h3 style="margin-bottom:10px">Passing Your Test: {suburb} Tips</h3>
-          <ul class="bullet-list">
-            <li>Practise on the local {suburb} roads you&rsquo;ll actually be tested near, not just quiet side streets.</li>
-            <li>Do a full pre-drive safety check every lesson so it becomes automatic on test day.</li>
-            <li>Book your lesson in the same time slot as your test to get used to that traffic pattern.</li>
-            <li>Take our free <a href="readiness-quiz.html">Test Readiness Quiz</a> to target your weak spots before booking a test.</li>
-          </ul>
+          <h3 style="margin-bottom:10px">Our Tip for {suburb} Learners</h3>
+          <p style="font-size:.9rem;color:#334155">{tip}</p>
         </div>
       </div>
     </div>
-  </section>'''.format(centre_line=centre_line, href=centre_href, c=centre_name, suburb=suburb)
+  </section>'''.format(centre_line=centre_line, href=centre_href, c=centre_name, suburb=suburb, tip=profile["tip"])
 
     map_section = '''<section class="block">
     <div class="container">
-      <div class="section-title"><h2>{suburb} Service Area</h2><p>We provide driving lessons throughout {suburb} and surrounding suburbs, with pickup included.</p></div>
+      <div class="section-title"><h2>Map of {suburb}</h2></div>
       <div class="map-embed" style="border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,.1)">
         <iframe src="https://www.google.com/maps?q={q}&output=embed" width="100%" height="360" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="{suburb} service area map"></iframe>
       </div>
@@ -1462,12 +1589,8 @@ def suburb_page(suburb):
   </section>'''.format(suburb=suburb, q=map_query)
 
     faq_extra = [
-        ("Do you offer driving lessons in {suburb}?".format(suburb=suburb),
-         "Yes, {suburb} is one of our core service areas. We offer flexible driving lessons {suburb} learners can book online or via WhatsApp, with pickup and drop-off included.".format(suburb=suburb)),
         ("Which VicRoads test centre will I be tested at from {suburb}?".format(suburb=suburb),
-         centre_line),
-        ("How much do driving lessons cost in {suburb}?".format(suburb=suburb),
-         "Pricing is the same across all our service areas including {suburb}. See our Lessons &amp; Test Packages on the homepage, from a Single Lesson through to the Ultimate Test Pass Pack, and message us on WhatsApp for current availability.".format(suburb=suburb)),
+         centre_line + " You can book any centre you like, but it usually makes sense to test where you have practised."),
     ]
     nap_faq = nap_faq_section(suburb, extra_faqs=faq_extra)
 
@@ -1496,24 +1619,18 @@ def suburb_page(suburb):
     "longitude": {lon}
   }},
   "description": "Driving lessons and VicRoads test preparation in {suburb}, servicing nearby South East Melbourne suburbs.",
-  "keywords": "driving school {suburb}, driving lessons {suburb}, {suburb} driving instructor, VicRoads test preparation {suburb}",
   "areaServed": [{areas}],
-  "aggregateRating": {{
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "105"
-  }},
   "sameAs": [{sameas}]
 }}
 </script>
 '''.format(href=area_page_href(suburb), addr=NAP_ADDRESS, lat=lat, lon=lon, suburb=suburb,
            areas=area_served_json, sameas=", ".join(sameas))
 
-    body = '\n  '.join([hero, trust_section_html(), intro, local_knowledge, centre_card, map_section, nap_faq, TOOLS_LINKS_SECTION])
+    body = '\n  '.join([hero, intro, local_knowledge, centre_card, map_section, nap_faq])
 
     html = page_shell(
-        title="Driving School {suburb} | Driving Lessons &amp; VicRoads Test Prep | XDS".format(suburb=suburb),
-        description="Driving school {suburb} learners trust for driving lessons and VicRoads test preparation, with pickup included and instructors ready for your nearest VicRoads test centre.".format(suburb=suburb),
+        title="Driving Lessons in {suburb} | X Zavier Driving School".format(suburb=suburb),
+        description="Driving lessons in {suburb} with pickup included. What you will practise on local roads, and how we prepare you for VicRoads {c}.".format(suburb=suburb, c=centre_name),
         depth=0,
         body_content=body,
         page_key="area-" + slug,

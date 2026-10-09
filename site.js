@@ -205,16 +205,6 @@ function buildLicenceResult(country, age, exp){
   if(country === 'recognised'){
     return { cls:'result-good', text:'<strong>Good news!</strong> Countries in this tier can usually exchange their licence directly for a Victorian licence with no knowledge or practical test required, subject to standard eligibility checks.<div style="margin-top:10px"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I%20have%20an%20overseas%20licence%20from%20a%20recognised%20country%20and%20want%20help%20converting%20it.">Ask XDS for Help</a></div>' };
   }
-  if(country === 'edr'){
-    var youngUnknownAge = isNaN(age);
-    var lightPathway = (!youngUnknownAge && age >= 25 && exp !== null && exp >= 3);
-    var text = youngUnknownAge
-      ? 'Experienced Driver Recognition countries have requirements that depend on your age and years of experience. Enter your age (and experience, on the full checker) for a precise answer.'
-      : (lightPathway
-          ? 'Based on your age (25+) and experience (3+ years), you may qualify for a more direct pathway, but a knowledge test is still commonly required. Book a chat with us to confirm your exact requirement.'
-          : 'Based on your details, you’ll most likely need to complete a knowledge test, and, particularly if you’re under 25 or have less driving experience, a practical driving test as well.');
-    return { cls:'result-warn', text:'<strong>Experienced Driver Recognition country.</strong> ' + text + '<div style="margin-top:10px"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I%20have%20an%20overseas%20licence%20and%20want%20help%20with%20my%20Victorian%20conversion%20pathway.">Ask XDS for Help</a></div>' };
-  }
   return { cls:'result-warn', text:'<strong>Full Victorian licensing process required.</strong> You’ll need to complete a knowledge test, a hazard perception test, and a practical driving test. Our instructors specialise in preparing overseas licence holders for exactly this pathway.<div style="margin-top:10px"><a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I%20need%20to%20complete%20the%20full%20Victorian%20driving%20test%20process%20and%20want%20lessons.">Book Lessons on WhatsApp</a></div>' };
 }
 
