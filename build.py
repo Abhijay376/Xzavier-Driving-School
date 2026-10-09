@@ -7,7 +7,7 @@ os.makedirs(PAGES_OUT, exist_ok=True)
 NAV_ITEMS = [
     ("home", "index.html", "Home"),
     ("drive-test-frankston", "drive-test-frankston.html", "Drive Test Frankston"),
-    ("drive-test-mooroolbark", "drive-test-mooroolbark.html", "Drive Test Mooroolbark"),
+    ("drive-test-ringwood", "drive-test-ringwood.html", "Drive Test Ringwood"),
     ("drive-test-pakenham", "drive-test-pakenham.html", "Drive Test Pakenham"),
     ("drive-test-heatherton", "drive-test-heatherton.html", "Drive Test Heatherton"),
     ("readiness-quiz", "readiness-quiz.html", "Readiness Quiz"),
@@ -207,7 +207,7 @@ def footer_html(depth):
         <h4>Test Centres</h4>
         <ul>
           <li><a href="{p}drive-test-frankston.html">Frankston</a></li>
-          <li><a href="{p}drive-test-mooroolbark.html">Mooroolbark</a></li>
+          <li><a href="{p}drive-test-ringwood.html">Ringwood</a></li>
           <li><a href="{p}drive-test-pakenham.html">Pakenham</a></li>
           <li><a href="{p}drive-test-heatherton.html">Heatherton</a></li>
         </ul>

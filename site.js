@@ -37,7 +37,7 @@ document.addEventListener('click', function(e){
 /* ===================== TEST CENTRE SEARCH (home) ===================== */
 var TEST_CENTERS = [
   {name:'Drive Test Frankston', sub:'71 Hartnett Dr, Seaford VIC 3198', href:'drive-test-frankston.html'},
-  {name:'Drive Test Mooroolbark', sub:'191 Hull Rd, Mooroolbark VIC 3138', href:'drive-test-mooroolbark.html'},
+  {name:'Drive Test Ringwood', sub:'93A Heatherdale Rd, Ringwood VIC 3134 (replaced Mooroolbark)', href:'drive-test-ringwood.html'},
   {name:'Drive Test Pakenham', sub:'33 Exchange Drive, Pakenham VIC 3810', href:'drive-test-pakenham.html'},
   {name:'Drive Test Heatherton', sub:'77 Corporate Dr, Heatherton VIC 3202', href:'drive-test-heatherton.html'},
   {name:'Dandenong', sub:'Instructor base and lessons (VicRoads Dandenong no longer runs drive tests)', href:'index.html#areas'}
@@ -50,7 +50,7 @@ function filterCenters(value){
   if(!q){ box.hidden = true; box.innerHTML=''; return; }
   var matches = TEST_CENTERS.filter(function(c){ return c.name.toLowerCase().includes(q); });
   if(!matches.length){
-    box.innerHTML = '<div class="search-empty">No test centre found for "' + escapeHtml(value) + '". Try Frankston, Mooroolbark, Pakenham or Heatherton.</div>';
+    box.innerHTML = '<div class="search-empty">No test centre found for "' + escapeHtml(value) + '". Try Frankston, Ringwood, Pakenham or Heatherton.</div>';
     box.hidden = false;
     return;
   }

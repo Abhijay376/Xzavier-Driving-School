@@ -414,7 +414,7 @@ SCHEMA = '''<script type="application/ld+json">
   "telephone": "+61434538142",
   "email": "xzavierdrivingschool@gmail.com",
   "url": "https://drivetestvic.com.au",
-  "areaServed": ["Dandenong", "Frankston", "Mooroolbark", "Pakenham", "Heatherton", "South East Melbourne"],
+  "areaServed": ["Dandenong", "Frankston", "Ringwood", "Pakenham", "Heatherton", "South East Melbourne"],
   "sameAs": ["https://share.google/PSBVWeY83VacVhKtu"],
   "employee": {
     "@type": "Person",
@@ -447,7 +447,7 @@ SCHEMA = '''<script type="application/ld+json">
     {
       "@type": "Question",
       "name": "Do your instructors only work in Dandenong itself?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No, Dandenong is our base but our coverage runs across South East Melbourne, with dedicated local pages for each of the 26 suburbs we serve and all four VicRoads test centres we prepare students for: Frankston, Mooroolbark, Pakenham and Heatherton." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No, Dandenong is our base but our coverage runs across South East Melbourne, with dedicated local pages for each of the 26 suburbs we serve and all four VicRoads test centres we prepare students for: Frankston, Ringwood, Pakenham and Heatherton." }
     }
   ]
 }
@@ -461,7 +461,7 @@ BYLINE = '<span class="byline"><svg viewBox="0 0 24 24" fill="currentColor"><pat
 # values above, which are too coarse for a site-specific location schema).
 CENTRE_GEO = {
     "Frankston": {"address": "71 Hartnett Dr, Seaford VIC 3198", "lat": -38.1051, "lon": 145.1339},
-    "Mooroolbark": {"address": "Shop 1, 191 Hull Rd, Mooroolbark VIC 3138", "lat": -37.7942, "lon": 145.3117},
+    "Ringwood": {"address": "93A Heatherdale Rd, Ringwood VIC 3134", "lat": -37.8230, "lon": 145.2120},
     "Pakenham": {"address": "33 Exchange Drive, Pakenham VIC 3810", "lat": -38.0759, "lon": 145.4834},
     "Heatherton": {"address": "77 Corporate Dr, Heatherton VIC 3202", "lat": -37.9556, "lon": 145.0797},
 }
@@ -791,7 +791,7 @@ AREAS_SECTION = '''<section class="block" id="areas">
       </div>
       <div class="area-grid">
         <a href="drive-test-frankston.html" class="area-chip">Drive Test Frankston<small>Test centre guide</small></a>
-        <a href="drive-test-mooroolbark.html" class="area-chip">Drive Test Mooroolbark<small>Test centre guide</small></a>
+        <a href="drive-test-ringwood.html" class="area-chip">Drive Test Ringwood<small>Test centre guide</small></a>
         <a href="drive-test-pakenham.html" class="area-chip">Drive Test Pakenham<small>Test centre guide</small></a>
         <a href="drive-test-heatherton.html" class="area-chip">Drive Test Heatherton<small>Test centre guide</small></a>
         <span class="area-chip no-test">Dandenong<small>Lessons &amp; instructor base (VicRoads Dandenong no longer runs drive tests)</small></span>
@@ -846,7 +846,7 @@ HOME_BODY = '\n  '.join([
 
 home_html = page_shell(
     title="Driving Instructor Dandenong | VicRoads Test Prep &amp; Lessons | XDS",
-    description="XDS is a VicRoads ADI accredited driving school serving Dandenong and South East Melbourne. 4.9★ rated with 105+ reviews. Book lessons, test packages, and get local VicRoads test centre guides for Frankston, Mooroolbark, Pakenham and Heatherton.",
+    description="XDS is a VicRoads ADI accredited driving school serving Dandenong and South East Melbourne. 4.9★ rated with 105+ reviews. Book lessons, test packages, and get local VicRoads test centre guides for Frankston, Ringwood, Pakenham and Heatherton.",
     depth=0,
     body_content=HOME_BODY,
     page_key="home",
@@ -971,7 +971,7 @@ open(os.path.join(OUT, "drive-test-frankston.html"), "w").write(frankston_html)
 print("drive-test-frankston.html written:", len(frankston_html), "bytes")
 
 # ============================================================
-# GENERIC DRIVE-TEST-CENTRE PAGE TEMPLATE (Mooroolbark / Pakenham / Heatherton)
+# GENERIC DRIVE-TEST-CENTRE PAGE TEMPLATE (Ringwood / Pakenham / Heatherton)
 # ============================================================
 def centre_page(name, slug, address, transit, quick_extra, fail_points, meta_title, meta_desc):
     hero = '''<section class="page-hero">
@@ -1053,18 +1053,19 @@ def centre_page(name, slug, address, transit, quick_extra, fail_points, meta_tit
 
 
 centre_page(
-    name="Mooroolbark",
-    slug="mooroolbark",
-    address="Shop 1, 191 Hull Rd, Mooroolbark VIC 3138",
-    transit="Short walk from Mooroolbark railway station (Lilydale line) and local bus services along Hull Road",
-    quick_extra="Located in the Mooroolbark Village shopping strip on Hull Road",
+    name="Ringwood",
+    slug="ringwood",
+    address="93A Heatherdale Rd, Ringwood VIC 3134",
+    transit="Near Heatherdale railway station on the Belgrave and Lilydale lines. Tests are by appointment only, booked through VicRoads",
+    quick_extra="This centre opened in 2022 and replaced the old Mooroolbark testing site, which has closed. VicRoads sometimes lists it as Mitcham",
     fail_points=[
-        {"road":"Hull Road", "speed":"60 km/h", "desc":"The main road directly outside the test centre, where busy shopping-strip traffic and pedestrian activity require careful speed management."},
-        {"road":"Manchester &amp; Cambridge Roads", "speed":"50 km/h", "desc":"Residential streets commonly used for Stage 1 manoeuvres, including 3-point turns."},
-        {"road":"Croydon-area roundabouts", "speed":"50 / 60 km/h", "desc":"Multi-lane roundabout negotiation and correct lane discipline are a frequent focus in Stage 2."},
+        {"road":"Heatherdale Road", "speed":"60 km/h", "desc":"The test starts by leaving the car park onto Heatherdale Road, near the station, with traffic lights, bus stops and bike lanes to watch for."},
+        {"road":"Canterbury Road", "speed":"60 / 70 km/h", "desc":"Lane changes here are a common part of the test, and the speed limit changes along the road, so keep checking the signs."},
+        {"road":"Maroondah Highway &amp; Wantirna Road", "speed":"60 km/h", "desc":"Busy at peak times. Expect to choose lanes early and keep a safe gap in heavy traffic."},
+        {"road":"School zones and roundabouts", "speed":"40 / 50 km/h", "desc":"There are many schools nearby, so watch for 40 km/h zones at set times, and give way correctly at local roundabouts."},
     ],
-    meta_title="Drive Test Mooroolbark | VicRoads Test Prep Guide | XDS",
-    meta_desc="Mooroolbark VicRoads test centre details, local roads and common fail points, from VicRoads ADI accredited instructor Medii Sha.",
+    meta_title="Drive Test Ringwood (Mitcham) | VicRoads Test Guide | XDS",
+    meta_desc="VicRoads Ringwood test centre at 93A Heatherdale Rd, which replaced Mooroolbark: address, local roads to practise and common fail points.",
 )
 
 centre_page(
@@ -1166,7 +1167,7 @@ def country_page(country):
         <li><h3>Check with VicRoads</h3><p>Run your details through the VicRoads requirements checker to confirm what applies to your {name} licence.</p></li>
         <li><h3>Gather your documents</h3><p>Valid {name} licence, passport/visa, proof of Victorian address, and an official English translation if your licence isn&rsquo;t in English.</p></li>
         <li><h3>Book any required tests</h3><p>{summary}</p></li>
-        <li><h3>Prepare with a local instructor</h3><p>If a practical test is required, XDS instructors can prepare you for your specific VicRoads test centre. See our guides for Frankston, Mooroolbark, Pakenham and Heatherton.</p></li>
+        <li><h3>Prepare with a local instructor</h3><p>If a practical test is required, XDS instructors can prepare you for your specific VicRoads test centre. See our guides for Frankston, Ringwood, Pakenham and Heatherton.</p></li>
         <li><h3>Receive your Victorian licence</h3><p>Once you&rsquo;ve completed the required steps, your Victorian driver licence is issued and your {name} licence is typically surrendered.</p></li>
       </ol>
     </div>
@@ -1251,7 +1252,7 @@ QUIZ_BODY = '\n  '.join([
       <div class="info-card">
         <h3 style="color:var(--navy);margin-bottom:8px">Driving Test Practice Tips for Melbourne Learners</h3>
         <ul class="bullet-list">
-          <li>Practise on or near your actual test route before test day. See our test centre guides for Frankston, Mooroolbark, Pakenham and Heatherton.</li>
+          <li>Practise on or near your actual test route before test day. See our test centre guides for Frankston, Ringwood, Pakenham and Heatherton.</li>
           <li>Do a full pre-drive safety check every time you practise, not just before the test.</li>
           <li>Book a lesson in the same time slot as your test so you&rsquo;re used to that traffic pattern.</li>
           <li>Focus extra practice on whatever the quiz above flags as your weak spot, rather than just repeating what you&rsquo;re already good at.</li>
@@ -1357,7 +1358,7 @@ CHECKER_BODY = '\n  '.join([
         <li><h3>Gather your documents</h3><p>Valid overseas licence, passport/visa, proof of address, and an official translation if your licence isn&rsquo;t in English.</p></li>
         <li><h3>Sit the knowledge test (if required)</h3><p>Licences from non-recognised countries need a road rules knowledge test.</p></li>
         <li><h3>Complete the hazard perception test (if required)</h3><p>VicRoads lets you take this online, and offers a free practice test.</p></li>
-        <li><h3>Take your practical drive test</h3><p>Where required, XDS instructors can prepare you specifically for your local VicRoads test centre. See our test centre guides for Frankston, Mooroolbark, Pakenham and Heatherton.</p></li>
+        <li><h3>Take your practical drive test</h3><p>Where required, XDS instructors can prepare you specifically for your local VicRoads test centre. See our test centre guides for Frankston, Ringwood, Pakenham and Heatherton.</p></li>
         <li><h3>Receive your Victorian licence</h3><p>Once you pass the required steps, your Victorian driver licence is issued and your overseas licence is typically surrendered.</p></li>
       </ol>
     </div>
@@ -1461,7 +1462,7 @@ CONTACT_BODY = '\n  '.join([
             <p style="font-size:.86rem;color:var(--muted);margin-bottom:10px">Lessons across Dandenong and South East Melbourne, with VicRoads test preparation for:</p>
             <ul class="bullet-list">
               <li><a href="drive-test-frankston.html">Frankston</a></li>
-              <li><a href="drive-test-mooroolbark.html">Mooroolbark</a></li>
+              <li><a href="drive-test-ringwood.html">Ringwood</a></li>
               <li><a href="drive-test-pakenham.html">Pakenham</a></li>
               <li><a href="drive-test-heatherton.html">Heatherton</a></li>
             </ul>
