@@ -192,7 +192,7 @@ def footer_html(depth):
         <div class="brand" style="margin-bottom:12px">
           <span class="footer-logo-wrap"><img src="{p}logo.png" alt="X Zavier Driving School" class="logo-img"></span>
         </div>
-        <p style="max-width:280px">VicRoads ADI accredited driving instructors serving Dandenong and South East Melbourne. 4.9&#9733; rated with 105+ verified Google reviews.</p>
+        <p style="max-width:280px">VicRoads ADI accredited driving instructors serving Dandenong and South East Melbourne. 5.0&#9733; rated from 105 Google reviews.</p>
       </div>
       <div>
         <h4>Quick Links</h4>
@@ -230,7 +230,7 @@ def footer_html(depth):
           <li><a href="tel:0434538142">0434 538 142</a></li>
           <li><a href="mailto:xzavierdrivingschool@gmail.com">xzavierdrivingschool@gmail.com</a></li>
           <li><a href="https://wa.me/61434538142" target="_blank" rel="noopener">WhatsApp Us</a></li>
-          <li><a href="https://share.google/PSBVWeY83VacVhKtu" target="_blank" rel="noopener">Google Reviews</a></li>
+          <li><a href="https://share.google/riUK3BwGQy4PkuHFI" target="_blank" rel="noopener">Google Reviews</a></li>
           <li><a href="{p}contact-us.html">Contact Page</a></li>
         </ul>
       </div>
@@ -238,7 +238,7 @@ def footer_html(depth):
     <div class="footer-bottom">
       <span>&copy; 2026 X Zavier Driving School (XDS). All rights reserved.</span>
       <span>|</span>
-      <span>4.9&#9733; &middot; 105+ Google Reviews</span>
+      <span>5.0&#9733; &middot; 105 Google Reviews</span>
       <span>|</span>
       <span>0434 538 142</span>
       <span>|</span>

@@ -416,7 +416,7 @@ SCHEMA = '''<script type="application/ld+json">
   "email": "xzavierdrivingschool@gmail.com",
   "url": "https://drivetestvic.com.au",
   "areaServed": ["Dandenong", "Frankston", "Ringwood", "Pakenham", "Heatherton", "South East Melbourne"],
-  "sameAs": ["https://share.google/PSBVWeY83VacVhKtu"],
+  "sameAs": ["https://share.google/riUK3BwGQy4PkuHFI"],
   "employee": {
     "@type": "Person",
     "name": "Medii Sha",
@@ -491,7 +491,7 @@ def centre_schema(name):
     "latitude": {lat},
     "longitude": {lon}
   }},
-  "sameAs": ["https://share.google/PSBVWeY83VacVhKtu"]
+  "sameAs": ["https://share.google/riUK3BwGQy4PkuHFI"]
 }}
 </script>
 '''.format(slug=slugify(name), name=name, addr=g["address"], lat=g["lat"], lon=g["lon"])
@@ -620,7 +620,7 @@ HOME_HERO = '''<section class="hero">
     <div class="container">
       <div>
         <h1>Driving Instructor Dandenong &amp; VicRoads Test Specialists</h1>
-        <p class="lead">X Zavier Driving School (XDS) is a VicRoads ADI accredited team based in Dandenong, backed by 4.9&#9733; from 105+ verified Google reviews. Learners across South East Melbourne choose us to get test-ready faster, with instructors who know the local VicRoads centres road by road.</p>
+        <p class="lead">X Zavier Driving School (XDS) is a VicRoads ADI accredited team based in Dandenong, backed by 5.0&#9733; from 105 Google reviews. Learners across South East Melbourne choose us to get test-ready faster, with instructors who know the local VicRoads centres road by road.</p>
         <div class="hero-actions">
           <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/61434538142?text=Hi%20XDS!%20I'd%20like%20to%20book%20a%20driving%20lesson.">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .5 0 .7.5.3.7.9 2.2 1 2.4.1.2.1.4 0 .6-.1.2-.2.3-.4.5l-.5.6c-.2.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1l.9-1c.2-.3.5-.2.8-.1.3.1 2 1 2.3 1.1.3.2.5.2.6.3.1.2.1.9-.1 1.6z"/></svg>
@@ -633,7 +633,7 @@ HOME_HERO = '''<section class="hero">
         </div>
         <div class="hero-badges">
           <span class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.7-5 4.4 1.5 6.5L12 16.8 6 19.6l1.5-6.5-5-4.4 6.6-.7z"/></svg>VicRoads ADI Accredited</span>
-          <span class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.7-5 4.4 1.5 6.5L12 16.8 6 19.6l1.5-6.5-5-4.4 6.6-.7z"/></svg>4.9&#9733; from 105+ Reviews</span>
+          <span class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.7-5 4.4 1.5 6.5L12 16.8 6 19.6l1.5-6.5-5-4.4 6.6-.7z"/></svg>5.0&#9733; from 105 Reviews</span>
           <span class="hero-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.7-5 4.4 1.5 6.5L12 16.8 6 19.6l1.5-6.5-5-4.4 6.6-.7z"/></svg>Dandenong-Based Since Day One</span>
         </div>
 
@@ -655,7 +655,7 @@ HOME_HERO = '''<section class="hero">
             <div class="instructor-promo-meta">Auto &middot; 7+ yrs instructing</div>
           </div>
         </div>
-        <div class="instructor-promo-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.9 &middot; 105+ reviews</span></div>
+        <div class="instructor-promo-stars">&#9733;&#9733;&#9733;&#9733;&#9733; <span>5.0 &middot; 105 reviews</span></div>
         <div class="instructor-promo-price">From $70/hr</div>
         <a href="contact-us.html" class="instructor-promo-btn">View Profile</a>
       </div>
@@ -750,35 +750,60 @@ TOOLS_HOME_SECTION = '''<section class="block" id="tools">
 REVIEWS_SECTION = '''<section class="block block-alt" id="reviews">
     <div class="container">
       <div class="section-title">
-        <span class="eyebrow">Social Proof</span>
+        <span class="eyebrow">Google Reviews</span>
         <h2>What Our Students Say</h2>
-        <p>Real reviews from learners who passed their VicRoads test with XDS.</p>
+        <p>Real reviews from our Google Business Profile, copied word for word.</p>
       </div>
       <div class="reviews-badge-row">
         <div class="rating-badge">
-          <div class="num">4.9</div>
+          <div class="num">5.0</div>
           <div>
             <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <div class="sub">105+ Verified Google Reviews</div>
+            <div class="sub">105 Google reviews</div>
           </div>
         </div>
-        <a href="https://share.google/PSBVWeY83VacVhKtu" target="_blank" rel="noopener" class="btn btn-outline-navy">View Our Google Business Profile</a>
+        <a href="https://share.google/riUK3BwGQy4PkuHFI" target="_blank" rel="noopener" class="btn btn-outline-navy">Read all 105 reviews on Google</a>
       </div>
       <div class="review-grid">
         <div class="review-card">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>"Medii Sha was an amazing instructor. Patient, calm and really helped me build my confidence. Passed first time! Highly recommend XDS."</p>
-          <div class="review-who"><span class="review-avatar">S</span><div><div class="review-name">Sarah L.</div><div class="review-loc">Passed at Dandenong VicRoads</div></div></div>
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"If you’re nervous about your drive test, go with Medi. He taught me everything I needed to know to get my probationary license. His techniques are clear, and he knows exactly what the examiners are looking for. I couldn’t have done it without his help!"</p>
+          <div class="review-who"><span class="review-avatar">S</span><div><div class="review-name">Swadha A.</div><div class="review-loc">Google review, 8 months ago</div></div></div>
         </div>
         <div class="review-card">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>"The online booking system is so easy and convenient. The lessons were well structured and exactly what I needed. Thanks XDS!"</p>
-          <div class="review-who"><span class="review-avatar">J</span><div><div class="review-name">James T.</div><div class="review-loc">Passed at Frankston VicRoads</div></div></div>
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"Medi was a fantastic driving instructor. He remained calm and professional during every lesson, which helped me stay relaxed and focused. His clear instructions and patience were key factors in my passing the test on my first try. I highly recommend Medi to anyone looking for a great driving instructor."</p>
+          <div class="review-who"><span class="review-avatar">S</span><div><div class="review-name">Stephie D.</div><div class="review-loc">Google review, a year ago</div></div></div>
         </div>
         <div class="review-card">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <p>"Great experience from start to finish. Flexible instructors and the test car was perfect. Highly recommend to anyone learning to drive."</p>
-          <div class="review-who"><span class="review-avatar">P</span><div><div class="review-name">Priya K.</div><div class="review-loc">Passed at Heatherton VicRoads</div></div></div>
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"Mohammad was an excellent driving instructor! Always letting me know exactly what I needed to improve on after each lesson and leading me to a perfect score test! Also the most affordable lessons I could find in the area, would strongly recommend!"</p>
+          <div class="review-who"><span class="review-avatar">E</span><div><div class="review-name">Emily C.</div><div class="review-loc">Google review, a year ago</div></div></div>
+        </div>
+        <div class="review-card">
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"I passed my drive test on 2nd OCT 2024, 1st attempt. Medi is a great instructor, he will be patient with you and help you with all the in depth tips to successfully pass your drive test. His lessons are top notch! Thanks Medi for a quick turnaround in just 3 hour lessons to pass the drive test in first attempt!"</p>
+          <div class="review-who"><span class="review-avatar">A</span><div><div class="review-name">Akshay P.</div><div class="review-loc">Google review, 2 years ago</div></div></div>
+        </div>
+        <div class="review-card">
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"I passed my drive test on the very first attempt at VicRoads Pakenham. Mehdi is the best driving instructor you can get for Southeast Melbourne period. If you want to become a confident but safe driver then Mehdi is the guy for you! 10/10!"</p>
+          <div class="review-who"><span class="review-avatar">A</span><div><div class="review-name">Apil G.</div><div class="review-loc">Google review, 4 years ago</div></div></div>
+        </div>
+        <div class="review-card">
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"I passed my drive test with medi, i went with another instructor before medi and that instructor did not teach properly i failed the first tesr because of him, with Medi he explained and teach me quickly and today I pass my test with him. He showed me easy techniques for everything. I would highly recommend him"</p>
+          <div class="review-who"><span class="review-avatar">S</span><div><div class="review-name">Sriyani M.</div><div class="review-loc">Google review, a year ago</div></div></div>
+        </div>
+        <div class="review-card">
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"I took a driving lessons with Medi. He was a very good and professional instructer with a very calm personality makes you comfortable. And i did pass with my 1 test by listening to his instruction. Thanks Medi. Recomended."</p>
+          <div class="review-who"><span class="review-avatar">S</span><div><div class="review-name">Sunita R.</div><div class="review-loc">Google review, a year ago</div></div></div>
+        </div>
+        <div class="review-card">
+          <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>"Best instructor to guide me, he is one of the best and guided so well that without miss you can clear test. His directions and instructions are very accurate. He paid a lot of attention and gave a lot time with lots of effort. It’s worth taking classes."</p>
+          <div class="review-who"><span class="review-avatar">P</span><div><div class="review-name">Puja G.</div><div class="review-loc">Google review, 8 months ago</div></div></div>
         </div>
       </div>
     </div>
@@ -848,7 +873,7 @@ HOME_BODY = '\n  '.join([
 
 home_html = page_shell(
     title="Driving Instructor Dandenong | VicRoads Test Prep &amp; Lessons | XDS",
-    description="XDS is a VicRoads ADI accredited driving school serving Dandenong and South East Melbourne. 4.9★ rated with 105+ reviews. Book lessons, test packages, and get local VicRoads test centre guides for Frankston, Ringwood, Pakenham and Heatherton.",
+    description="XDS is a VicRoads ADI accredited driving school serving Dandenong and South East Melbourne. 5.0★ rated with 105 reviews. Book lessons, test packages, and get local VicRoads test centre guides for Frankston, Ringwood, Pakenham and Heatherton.",
     depth=0,
     body_content=HOME_BODY,
     page_key="home",
@@ -1472,9 +1497,9 @@ CONTACT_BODY = '\n  '.join([
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1zm1 2v.6l7 4.7 7-4.7V6H5zm14 2.3l-6.5 4.3a1 1 0 01-1 0L5 8.3V18h14V8.3z"/></svg>
               <div><strong>Email</strong><span>xzavierdrivingschool@gmail.com</span></div>
             </a>
-            <a class="contact-method" target="_blank" rel="noopener" href="https://share.google/PSBVWeY83VacVhKtu">
+            <a class="contact-method" target="_blank" rel="noopener" href="https://share.google/riUK3BwGQy4PkuHFI">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6 6.6.7-5 4.4 1.5 6.5L12 16.8 6 19.6l1.5-6.5-5-4.4 6.6-.7z"/></svg>
-              <div><strong>Google Business Profile</strong><span>4.9&#9733; &middot; 105+ verified reviews</span></div>
+              <div><strong>Google Business Profile</strong><span>5.0&#9733; &middot; 105 reviews</span></div>
             </a>
             <a class="contact-method" target="_blank" rel="noopener" href="https://www.facebook.com/meddii.sha/">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1.5 8h1.8v2.2h-1.8V21h-2.4v-8.8H9.7V10h1.4V8.7c0-1.9 1-3 3.2-3h1.8v2.2h-1.2c-.6 0-1.4.2-1.4 1V10z"/></svg>
@@ -1617,7 +1642,7 @@ def suburb_page(suburb):
     lessons_section = '''<section class="block block-alt">
     <div class="container" style="max-width:800px">
       <div class="section-title"><h2>Lessons and Prices for {suburb} Learners</h2></div>
-      <p style="font-size:.95rem;color:#334155;margin-bottom:12px">All our lessons are automatic, in a dual-control car, and focused on one thing: getting you through your VicRoads test. Our students have a 99% pass rate.</p>
+      <p style="font-size:.95rem;color:#334155;margin-bottom:12px">All our lessons are automatic, in a dual-control car, and focused on one thing: getting you through your VicRoads test. Our students have a 99% pass rate, and we are rated 5.0 from <a href="https://share.google/riUK3BwGQy4PkuHFI" target="_blank" rel="noopener">105 Google reviews</a>.</p>
       <ul class="bullet-list">
         <li><strong>Single lesson:</strong> $70, with pickup in {suburb}.</li>
         <li><strong>5-Lesson Pass:</strong> $325.</li>
@@ -1676,7 +1701,7 @@ def suburb_page(suburb):
     nap_faq = nap_faq_section(suburb, extra_faqs=faq_extra)
 
     area_served_json = ", ".join('"{0}"'.format(n) for n in nearest20)
-    sameas = ['"https://share.google/PSBVWeY83VacVhKtu"']
+    sameas = ['"https://share.google/riUK3BwGQy4PkuHFI"']
     if wikidata:
         sameas.append('"https://www.wikidata.org/wiki/{0}"'.format(wikidata))
     local_schema = '''<script type="application/ld+json">
