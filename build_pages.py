@@ -1186,7 +1186,7 @@ def country_page(country):
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How many lessons does an experienced {name} driver need?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">Experienced drivers usually need fewer lessons than new learners, because the focus is on Victorian road rules and test habits rather than car control. We will tell you after your first lesson what you need.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">All our lessons are automatic. Experienced drivers usually need fewer lessons than new learners, because the focus is on Victorian road rules and test habits rather than car control. We will tell you after your first lesson what you need.</div></div>
         </div>
       </div>
     </div>
@@ -1592,6 +1592,7 @@ def suburb_page(suburb):
     lessons_section = '''<section class="block block-alt">
     <div class="container" style="max-width:800px">
       <div class="section-title"><h2>Lessons and Prices for {suburb} Learners</h2></div>
+      <p style="font-size:.95rem;color:#334155;margin-bottom:12px">All our lessons are automatic, in a dual-control car, and focused on one thing: getting you through your VicRoads test. Our students have a 99% pass rate.</p>
       <ul class="bullet-list">
         <li><strong>Single lesson:</strong> $70, with pickup in {suburb}.</li>
         <li><strong>5-Lesson Pass:</strong> $325.</li>
