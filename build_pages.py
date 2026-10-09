@@ -414,7 +414,7 @@ SCHEMA = '''<script type="application/ld+json">
   "email": "xzavierdrivingschool@gmail.com",
   "url": "https://drivetestvic.com.au",
   "areaServed": ["Dandenong", "Frankston", "Ringwood", "Pakenham", "Heatherton", "South East Melbourne"],
-  "sameAs": ["https://share.google/riUK3BwGQy4PkuHFI"],
+  "sameAs": ["https://share.google/riUK3BwGQy4PkuHFI", "https://www.facebook.com/xzavierdrivingschool"],
   "employee": {
     "@type": "Person",
     "name": "Medii Sha",
@@ -489,7 +489,7 @@ def centre_schema(name):
     "latitude": {lat},
     "longitude": {lon}
   }},
-  "sameAs": ["https://share.google/riUK3BwGQy4PkuHFI"]
+  "sameAs": ["https://share.google/riUK3BwGQy4PkuHFI", "https://www.facebook.com/xzavierdrivingschool"]
 }}
 </script>
 '''.format(slug=slugify(name), name=name, addr=g["address"], lat=g["lat"], lon=g["lon"])
@@ -850,6 +850,17 @@ FINAL_CTA_HOME = '''<section class="final-cta" id="contact-info">
     </div>
   </section>'''
 
+FACEBOOK_SECTION = '''<section class="block" id="facebook">
+    <div class="container" style="text-align:center">
+      <div class="section-title">
+        <span class="eyebrow">Latest From Facebook</span>
+        <h2>Recent Passes and Updates</h2>
+        <p>We post our students' test passes on our <a href="https://www.facebook.com/xzavierdrivingschool" target="_blank" rel="noopener">Facebook page</a>.</p>
+      </div>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fxzavierdrivingschool&tabs=timeline&width=500&height=650&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false" width="500" height="650" style="border:none;overflow:hidden;max-width:100%;border-radius:12px" scrolling="no" frameborder="0" loading="lazy" allow="encrypted-media" title="X Zavier Driving School on Facebook"></iframe>
+    </div>
+  </section>'''
+
 HOME_BODY = '\n  '.join([
     HOME_HERO,
     trust_section_html(),
@@ -871,6 +882,7 @@ HOME_BODY = '\n  '.join([
         ],
     ),
     FINAL_CTA_HOME,
+    FACEBOOK_SECTION,
 ])
 
 home_html = page_shell(
