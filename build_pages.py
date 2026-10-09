@@ -273,7 +273,7 @@ SUBURB_PROFILES = {
 # NAP (Name / Address / Phone). Address sourced from an old repo, NOT confirmed
 # by the user; flagged clearly in the build log and final summary.
 NAP_NAME = "X Zavier Driving School (XDS)"
-NAP_ADDRESS = "124 Stud Rd, Dandenong VIC 3175"
+NAP_ADDRESS = "Dandenong VIC 3175"
 NAP_PHONE_DISPLAY = "0434 538 142"
 NAP_PHONE_TEL = "0434538142"
 NAP_EMAIL = "xzavierdrivingschool@gmail.com"
@@ -376,7 +376,7 @@ set_country_nav_items([
 def nap_faq_section(suburb_label, address=NAP_ADDRESS, extra_faqs=None):
     faqs = [
         ("Where is X Zavier Driving School located?",
-         "Our home base and instructor meeting point is {addr}. We also provide pickup and drop-off for lessons across {area} and surrounding South East Melbourne suburbs, so you don't need to travel to us.".format(addr=address, area=suburb_label)),
+         "We are based in {addr}. We don't have a shopfront, so please don't visit in person. Every lesson includes pickup and drop-off across {area} and nearby South East Melbourne suburbs, so you never need to come to us.".format(addr=address, area=suburb_label)),
         ("What is the best way to contact XDS?",
          "WhatsApp is the fastest way to reach us on {phone}, and most messages get a reply within the hour. You can also call {phone}, email {email}, or use the Contact Us form on this site.".format(phone=NAP_PHONE_DISPLAY, email=NAP_EMAIL)),
     ]
@@ -480,7 +480,8 @@ def centre_schema(name):
   "description": "VicRoads {name} drive test centre guide and test preparation from X Zavier Driving School.",
   "address": {{
     "@type": "PostalAddress",
-    "streetAddress": "{addr}",
+    "addressLocality": "Dandenong",
+    "postalCode": "3175",
     "addressRegion": "VIC",
     "addressCountry": "AU"
   }},
@@ -1638,7 +1639,8 @@ def suburb_page(suburb):
   "url": "https://drivetestvic.com.au/{href}",
   "address": {{
     "@type": "PostalAddress",
-    "streetAddress": "{addr}",
+    "addressLocality": "Dandenong",
+    "postalCode": "3175",
     "addressRegion": "VIC",
     "addressCountry": "AU"
   }},
