@@ -462,7 +462,7 @@ BYLINE = '<span class="byline"><svg viewBox="0 0 24 24" fill="currentColor"><pat
 CENTRE_GEO = {
     "Frankston": {"address": "71 Hartnett Dr, Seaford VIC 3198", "lat": -38.1051, "lon": 145.1339},
     "Mooroolbark": {"address": "Shop 1, 191 Hull Rd, Mooroolbark VIC 3138", "lat": -37.7942, "lon": 145.3117},
-    "Pakenham": {"address": "3/4 Stephenson St, Pakenham VIC 3810", "lat": -38.0759, "lon": 145.4834},
+    "Pakenham": {"address": "33 Exchange Drive, Pakenham VIC 3810", "lat": -38.0759, "lon": 145.4834},
     "Heatherton": {"address": "77 Corporate Dr, Heatherton VIC 3202", "lat": -37.9556, "lon": 145.0797},
 }
 
@@ -1070,9 +1070,9 @@ centre_page(
 centre_page(
     name="Pakenham",
     slug="pakenham",
-    address="3/4 Stephenson St, Pakenham VIC 3810",
-    transit="Close to Pakenham railway station (Pakenham line) and the Pakenham bus interchange on Station Street",
-    quick_extra="One of the busier growth-corridor test centres, so book appointments early",
+    address="33 Exchange Drive, Pakenham VIC 3810 (from 16 November 2026)",
+    transit="Parking is available on site, including accessible spaces. Check your booking confirmation for the exact location",
+    quick_extra="VicRoads is moving Pakenham testing to its new Exchange Drive centre. The old Pakenham Testing Centre runs until Friday 13 November 2026, and tests booked on or after Monday 16 November are at 33 Exchange Drive",
     fail_points=[
         {"road":"Princes Highway", "speed":"80 km/h", "desc":"High-speed merging and lane discipline through Pakenham&rsquo;s main highway corridor."},
         {"road":"John Street &amp; Main Street", "speed":"50 km/h", "desc":"Busy town-centre streets with pedestrian crossings and frequent give-way situations."},
@@ -1131,6 +1131,12 @@ def country_page(country):
       <ul class="bullet-list">
         {habits}
       </ul>
+      <h3 style="margin:22px 0 10px">Good to know</h3>
+      <ul class="bullet-list">
+        <li>VicRoads lets you take the hazard perception test online, and has a free practice version.</li>
+        <li>Permanent residents may be able to get documents translated free through the Department of Home Affairs Free Translating Service.</li>
+        <li>VicRoads test and licence fees are paid separately to any lessons.</li>
+      </ul>
       <p style="font-size:.85rem;color:var(--muted);margin-top:16px">Rules change. Always confirm your exact requirements with the <a href="https://www.vicroads.vic.gov.au/licences/new-to-victoria/convert-your-overseas-licence" target="_blank" rel="noopener">VicRoads requirements checker</a> before you book anything.</p>
     </div>
   </section>'''.format(name=name, side=country["side"], language=country["language"],
@@ -1176,7 +1182,11 @@ def country_page(country):
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How can XDS help me convert my {name} licence?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="faq-a"><div class="faq-a-inner">Our VicRoads ADI accredited instructors prepare {name} licence holders specifically for the Victorian practical test where one is required, including local test routes at Frankston, Mooroolbark, Pakenham and Heatherton.</div></div>
+          <div class="faq-a"><div class="faq-a-inner">Our VicRoads ADI accredited instructors prepare {name} licence holders for the Victorian drive test, including the test routes at Frankston, Pakenham and Heatherton.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false" onclick="toggleFaq(this)">How many lessons does an experienced {name} driver need?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-a"><div class="faq-a-inner">Experienced drivers usually need fewer lessons than new learners, because the focus is on Victorian road rules and test habits rather than car control. We will tell you after your first lesson what you need.</div></div>
         </div>
       </div>
     </div>
@@ -1579,6 +1589,19 @@ def suburb_page(suburb):
     </div>
   </section>'''.format(centre_line=centre_line, href=centre_href, c=centre_name, suburb=suburb, tip=profile["tip"])
 
+    lessons_section = '''<section class="block block-alt">
+    <div class="container" style="max-width:800px">
+      <div class="section-title"><h2>Lessons and Prices for {suburb} Learners</h2></div>
+      <ul class="bullet-list">
+        <li><strong>Single lesson:</strong> $70, with pickup in {suburb}.</li>
+        <li><strong>5-Lesson Pass:</strong> $325.</li>
+        <li><strong>Express Test Package:</strong> $220, including use of our dual-control car for your test at VicRoads {c}.</li>
+        <li><strong>Ultimate Test Pass Pack:</strong> $560.</li>
+      </ul>
+      <p style="font-size:.9rem;color:#334155;margin-top:12px">If you are under 21, VicRoads needs you to log 120 hours of supervised driving, including 20 hours at night, before your drive test. Lessons with us count towards those hours. VicRoads test and booking fees are paid separately. See <a href="index.html#packages">full package details</a>.</p>
+    </div>
+  </section>'''.format(suburb=suburb, c=centre_name)
+
     map_section = '''<section class="block">
     <div class="container">
       <div class="section-title"><h2>Map of {suburb}</h2></div>
@@ -1591,6 +1614,10 @@ def suburb_page(suburb):
     faq_extra = [
         ("Which VicRoads test centre will I be tested at from {suburb}?".format(suburb=suburb),
          centre_line + " You can book any centre you like, but it usually makes sense to test where you have practised."),
+        ("How many lessons will I need?",
+         "It depends on how much driving you have already done. After your first lesson in {suburb} we will tell you honestly what you need to work on and roughly how many lessons that will take.".format(suburb=suburb)),
+        ("Can I use your car for my test?",
+         "Yes. Our Express Test Package and Ultimate Test Pass Pack include use of our dual-control car for your test at VicRoads {c}.".format(c=centre_name)),
     ]
     nap_faq = nap_faq_section(suburb, extra_faqs=faq_extra)
 
@@ -1626,7 +1653,7 @@ def suburb_page(suburb):
 '''.format(href=area_page_href(suburb), addr=NAP_ADDRESS, lat=lat, lon=lon, suburb=suburb,
            areas=area_served_json, sameas=", ".join(sameas))
 
-    body = '\n  '.join([hero, intro, local_knowledge, centre_card, map_section, nap_faq])
+    body = '\n  '.join([hero, intro, local_knowledge, centre_card, lessons_section, map_section, nap_faq])
 
     html = page_shell(
         title="Driving Lessons in {suburb} | X Zavier Driving School".format(suburb=suburb),

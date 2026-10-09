@@ -38,7 +38,7 @@ document.addEventListener('click', function(e){
 var TEST_CENTERS = [
   {name:'Drive Test Frankston', sub:'71 Hartnett Dr, Seaford VIC 3198', href:'drive-test-frankston.html'},
   {name:'Drive Test Mooroolbark', sub:'191 Hull Rd, Mooroolbark VIC 3138', href:'drive-test-mooroolbark.html'},
-  {name:'Drive Test Pakenham', sub:'3/4 Stephenson St, Pakenham VIC 3810', href:'drive-test-pakenham.html'},
+  {name:'Drive Test Pakenham', sub:'33 Exchange Drive, Pakenham VIC 3810', href:'drive-test-pakenham.html'},
   {name:'Drive Test Heatherton', sub:'77 Corporate Dr, Heatherton VIC 3202', href:'drive-test-heatherton.html'},
   {name:'Dandenong', sub:'Instructor base and lessons (VicRoads Dandenong does not conduct drive tests)', href:'index.html#areas'}
 ];
