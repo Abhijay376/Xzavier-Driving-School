@@ -432,7 +432,7 @@ SCHEMA = '''<script type="application/ld+json">
     {
       "@type": "Question",
       "name": "I'm based in Dandenong, where will I actually sit my test?",
-      "acceptedAnswer": { "@type": "Answer", "text": "VicRoads Dandenong doesn't run practical drive tests, so Dandenong learners are usually booked at VicRoads Heatherton. Your instructor will train you specifically on that centre's local roads well before test day." }
+      "acceptedAnswer": { "@type": "Answer", "text": "VicRoads Dandenong no longer runs drive tests, and the Dandenong centre closes on 16 November 2026, so Dandenong learners are usually booked at VicRoads Heatherton. Your instructor will train you specifically on that centre's local roads well before test day." }
     },
     {
       "@type": "Question",
@@ -794,7 +794,7 @@ AREAS_SECTION = '''<section class="block" id="areas">
         <a href="drive-test-mooroolbark.html" class="area-chip">Drive Test Mooroolbark<small>Test centre guide</small></a>
         <a href="drive-test-pakenham.html" class="area-chip">Drive Test Pakenham<small>Test centre guide</small></a>
         <a href="drive-test-heatherton.html" class="area-chip">Drive Test Heatherton<small>Test centre guide</small></a>
-        <span class="area-chip no-test">Dandenong<small>Lessons &amp; instructor base (VicRoads Dandenong does not conduct drive tests)</small></span>
+        <span class="area-chip no-test">Dandenong<small>Lessons &amp; instructor base (VicRoads Dandenong no longer runs drive tests)</small></span>
       </div>
     </div>
   </section>'''
@@ -836,7 +836,7 @@ HOME_BODY = '\n  '.join([
             ("Does XDS offer driving lessons in Dandenong?",
              "Yes, Dandenong is our home base and main service area. We offer driving lessons Dandenong learners can book directly, with flexible instructor options and pickup from home, school or work."),
             ("Which VicRoads test centre do Dandenong learners use?",
-             "VicRoads Dandenong does not conduct practical drive tests. Dandenong-based learners are typically booked in at <a href=\"drive-test-heatherton.html\">VicRoads Heatherton</a>, and our instructors prepare you specifically for that test centre's local roads."),
+             "VicRoads Dandenong no longer runs practical drive tests. Dandenong-based learners are typically booked in at <a href=\"drive-test-heatherton.html\">VicRoads Heatherton</a>, and our instructors prepare you specifically for that test centre's local roads."),
             ("How much do driving lessons cost in Dandenong?",
              "Pricing is the same for all Dandenong learners. See our Lessons &amp; Test Packages above, from a Single Lesson through to the Ultimate Test Pass Pack, with bulk discounts available, and message us on WhatsApp for current availability."),
         ],

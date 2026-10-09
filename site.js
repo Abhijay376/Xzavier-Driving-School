@@ -40,7 +40,7 @@ var TEST_CENTERS = [
   {name:'Drive Test Mooroolbark', sub:'191 Hull Rd, Mooroolbark VIC 3138', href:'drive-test-mooroolbark.html'},
   {name:'Drive Test Pakenham', sub:'33 Exchange Drive, Pakenham VIC 3810', href:'drive-test-pakenham.html'},
   {name:'Drive Test Heatherton', sub:'77 Corporate Dr, Heatherton VIC 3202', href:'drive-test-heatherton.html'},
-  {name:'Dandenong', sub:'Instructor base and lessons (VicRoads Dandenong does not conduct drive tests)', href:'index.html#areas'}
+  {name:'Dandenong', sub:'Instructor base and lessons (VicRoads Dandenong no longer runs drive tests)', href:'index.html#areas'}
 ];
 
 function filterCenters(value){
@@ -210,7 +210,7 @@ function buildLicenceResult(country, age, exp){
 
 /* ===================== HOME FAQ ===================== */
 var homeFaqItems = [
-  {q:'I&rsquo;m based in Dandenong, where will I actually sit my test?', a:'VicRoads Dandenong doesn&rsquo;t run practical drive tests, so Dandenong learners are usually booked at VicRoads Heatherton. Your instructor will train you specifically on that centre&rsquo;s local roads well before test day.'},
+  {q:'I&rsquo;m based in Dandenong, where will I actually sit my test?', a:'VicRoads Dandenong no longer runs drive tests, and the Dandenong centre closes on 16 November 2026, so Dandenong learners are usually booked at VicRoads Heatherton. Your instructor will train you specifically on that centre&rsquo;s local roads well before test day.'},
   {q:'Do I need my own car, or can I use yours for the test?', a:'Either works. Bring a fully compliant personal vehicle, or hire one of our dual-control instructor cars, already built into the Express Test Package and Ultimate Test Pass Pack.'},
   {q:'I passed my test overseas, do I still need to sit a VicRoads test?', a:'It depends entirely on which country issued your licence. Run it through our free Overseas Licence Conversion Checker above for an instant, specific answer.'},
   {q:'What&rsquo;s the fastest way to lock in a lesson time?', a:'WhatsApp beats phone calls here, most enquiries get a reply and a confirmed slot within the hour. The button is fixed to the bottom of every page.'},
