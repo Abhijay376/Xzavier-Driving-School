@@ -287,9 +287,7 @@ def area_page_href(suburb):
 
 # Register the "Areas We Serve" nav dropdown BEFORE any page is generated,
 # so every page (including index.html, generated further down) gets it.
-set_area_nav_items([
-    ("area-" + slugify(s), area_page_href(s), s) for s in AREA_SUBURBS
-])
+set_area_nav_items([])  # suburb pages paused
 
 TIER_INFO = {
     "recognised": {
@@ -448,7 +446,7 @@ SCHEMA = '''<script type="application/ld+json">
     {
       "@type": "Question",
       "name": "Do your instructors only work in Dandenong itself?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No, Dandenong is our base but our coverage runs across South East Melbourne, with dedicated local pages for each of the 26 suburbs we serve and all four VicRoads test centres we prepare students for: Frankston, Ringwood, Pakenham and Heatherton." }
+      "acceptedAnswer": { "@type": "Answer", "text": "No, Dandenong is our base but our coverage runs across South East Melbourne, with pickup across 26 suburbs and all four VicRoads test centres we prepare students for: Frankston, Ringwood, Pakenham and Heatherton." }
     }
   ]
 }
@@ -823,8 +821,12 @@ AREAS_SECTION = '''<section class="block" id="areas">
         <a href="drive-test-heatherton.html" class="area-chip">Drive Test Heatherton<small>Test centre guide</small></a>
         <span class="area-chip no-test">Dandenong<small>Lessons &amp; instructor base (VicRoads Dandenong no longer runs drive tests)</small></span>
       </div>
+      <h3 style="margin:28px 0 10px;text-align:center">Suburbs we pick up from</h3>
+      <p style="max-width:800px;margin:0 auto;text-align:center;color:#334155">__SUBURBS__</p>
     </div>
   </section>'''
+
+AREAS_SECTION = AREAS_SECTION.replace('__SUBURBS__', ', '.join(sorted(AREA_SUBURBS + ['Dandenong'])) + '. Every lesson includes pickup, so you never need to come to us.')
 
 FAQ_SECTION = '''<section class="block block-alt" id="faq">
     <div class="container">
@@ -1749,8 +1751,10 @@ def suburb_page(suburb):
     print(fname, "written:", len(html), "bytes")
 
 
-for s in AREA_SUBURBS:
-    suburb_page(s)
+# Suburb pages are paused while Google's manual action is reviewed.
+# Restore from branch backup/suburb-pages-2026-10-09.
+# for s in AREA_SUBURBS:
+#     suburb_page(s)
 
 # ============================================================
 # SITEMAP.XML + ROBOTS.TXT

@@ -214,7 +214,7 @@ var homeFaqItems = [
   {q:'Do I need my own car, or can I use yours for the test?', a:'Either works. Bring a fully compliant personal vehicle, or hire one of our dual-control instructor cars, already built into the Express Test Package and Ultimate Test Pass Pack.'},
   {q:'I passed my test overseas, do I still need to sit a VicRoads test?', a:'It depends entirely on which country issued your licence. Run it through our free Overseas Licence Conversion Checker above for an instant, specific answer.'},
   {q:'What&rsquo;s the fastest way to lock in a lesson time?', a:'WhatsApp beats phone calls here, most enquiries get a reply and a confirmed slot within the hour. The button is fixed to the bottom of every page.'},
-  {q:'Do your instructors only work in Dandenong itself?', a:'No, Dandenong is our base but our coverage runs across South East Melbourne, with dedicated local pages for each of the 26 suburbs we serve and all four VicRoads test centres we prepare students for.'}
+  {q:'Do your instructors only work in Dandenong itself?', a:'No, Dandenong is our base but our coverage runs across South East Melbourne, with pickup across 26 suburbs and all four VicRoads test centres we prepare students for.'}
 ];
 
 function renderHomeFaq(){
