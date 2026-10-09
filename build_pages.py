@@ -394,7 +394,7 @@ def nap_faq_section(suburb_label, address=NAP_ADDRESS, extra_faqs=None):
         <div class="info-card">
           <h2><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7z"/></svg>Business Details</h2>
           <div class="info-row"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7z"/></svg><div><strong>Name</strong><span>{name}</span></div></div>
-          <div class="info-row"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7z"/></svg><div><strong>Address</strong><span>{addr}</span></div></div>
+          <div class="info-row"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 00-7-7z"/></svg><div><strong>Serving</strong><span>{area} and nearby suburbs &middot; pickup included<br><small style="color:var(--muted)">Based in {addr}, no shopfront</small></span></div></div>
           <div class="info-row"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg><div><strong>Phone</strong><span><a href="tel:{tel}">{phone}</a></span></div></div>
           <div class="info-row"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a1 1 0 011 1v14a1 1 0 01-1 1H4a1 1 0 01-1-1V5a1 1 0 011-1zm1 2v.6l7 4.7 7-4.7V6H5zm14 2.3l-6.5 4.3a1 1 0 01-1 0L5 8.3V18h14V8.3z"/></svg><div><strong>Email</strong><span><a href="mailto:{email}">{email}</a></span></div></div>
         </div>
@@ -403,7 +403,7 @@ def nap_faq_section(suburb_label, address=NAP_ADDRESS, extra_faqs=None):
         </div>
       </div>
     </div>
-  </section>'''.format(name=NAP_NAME, addr=address, tel=NAP_PHONE_TEL, phone=NAP_PHONE_DISPLAY, email=NAP_EMAIL, faqs=items)
+  </section>'''.format(name=NAP_NAME, addr=address, area=suburb_label, tel=NAP_PHONE_TEL, phone=NAP_PHONE_DISPLAY, email=NAP_EMAIL, faqs=items)
 
 SCHEMA = '''<script type="application/ld+json">
 {
